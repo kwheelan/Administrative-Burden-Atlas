@@ -1,0 +1,19 @@
+{% include 'head.html' %}
+
+<body>
+    <div class="container">
+      <br>
+      <h1>
+          {% block header %}
+          {% endblock %}
+      </h1>
+    </div>
+
+    
+    {% block body %}
+    {% endblock %}
+</body>
+
+{% if False %}
+  {% include 'footer.html' %}
+{% endif %}

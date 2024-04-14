@@ -1,0 +1,28 @@
+{% set page = 'index' %}
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container">
+    <h1 style="margin-top: 30px; text-align: center;">
+        Atlas of Administrative Burden
+    </h1>
+</div>
+    <br>
+
+    <!-- Map container -->
+        <div id="container">
+            <svg id="map" class="map"></svg>
+        </div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <h2 id="sidebar-title">State Info</h2>
+    <div id="sidebar-content">
+      <!-- Dynamic content will be injected here -->
+    </div>
+    <button id="close-sidebar" onclick="toggleSidebar()">Close</button>
+  </div>
+    
+{% endblock %}

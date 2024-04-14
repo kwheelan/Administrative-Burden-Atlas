@@ -1,0 +1,24 @@
+<div id="sidebar" class="sidebar" style="display: none;">
+    <!-- Sidebar content such as state info will go here -->
+    Test
+    <h2 id="sidebar-title">State Info</h2>
+    <div id="sidebar-content">
+        Test
+        <!-- Dynamic content will be injected here -->
+    </div>
+    <button id="close-sidebar" onclick="document.getElementById('sidebar').style.display = 'none';">Close</button>
+</div>
+
+<script>
+  function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    if (sidebar.style.right === '0px') {
+      sidebar.style.right = '-300px'; // Hide the sidebar
+    } else {
+      sidebar.style.right = '0px'; // Show the sidebar
+    }
+  }
+
+  // Register click event for close-sidebar button
+  document.getElementById('close-sidebar').onclick = toggleSidebar;
+</script>
