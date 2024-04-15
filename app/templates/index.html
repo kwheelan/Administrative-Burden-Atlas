@@ -39,10 +39,10 @@
                 .attr('class', 'state')
                 .on('click', function(event, d) {
                     // Open the sidebar when a state path is clicked
-                    // TODO: fix this line
-                    //$('#sidebar-title').text(d.properties.name);  // Update the title to the state's name
-                    toggleSidebar();  // Toggle the sidebar visibility
+                    $('#sidebar-title').text(usStatesData.features[d].properties.name);  // Update the title to the state's name
+                    showSidebar();  // Toggle the sidebar visibility
                 });
+
         }
 
         // Fetch the GeoJSON data and then call the render function
@@ -56,6 +56,13 @@
             var rightPos = sidebar.css('right') === '0px' ? '-300px' : '0px';
             sidebar.css('right', rightPos);
         }
+
+        // The function to toggle the sidebar's visibility
+        function showSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.style.right = '0px'; // Show the sidebar
+        }
+
     });
 </script>
     

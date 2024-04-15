@@ -5,7 +5,7 @@
 
     "01":{"id":"01","name":"Alabama","abbr":"AL","title":"","link":"http://bt-test-site.herokuapp.com/en/al/home","popup":"","cssclass":"","popupcontent":"","color":""},
 
-    "02":{"id":"02","name":"Alaska","abbr":"AK","title":"","link":"","popup":"","cssclass":"","popupcontent":"Test","color":""},
+    "02":{"id":"02","name":"Alaska","abbr":"AK","title":"","link":"","popup":"","cssclass":"","popupcontent":"","color":""},
     
     "04":{"id":"04","name":"Arizona","abbr":"AZ","title":"","link":"","popup":"","cssclass":"","popupcontent":"","color":"","disablelink":true},
     
