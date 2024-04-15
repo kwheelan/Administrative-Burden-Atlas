@@ -21,7 +21,7 @@ background-color: var(--darkGray);
 }
 
 p {
-color: white;
+color: skyblue;
 }
 
 h3, h1 {
@@ -46,8 +46,8 @@ padding-top: 30px;
 /* map */
 
 #container {
-    width: 100%; /* Full width of the parent */
-    height: 500px; /* Adjust the height as needed */
+    width: calc(100% - 300px); /* Leave space for the sidebar when it's open */
+    height: 500px; /* Set the height for the map container */
 }
 
 .map {
@@ -70,15 +70,41 @@ padding-top: 30px;
 
 /* Sidebar */
 
-.sidebar {
-    position: fixed; /* or absolute */
+#sidebar {
+    position: fixed;
     top: 0;
-    right: 0;
-    width: 300px; /* Width of the sidebar */
-    height: 100%; /* Full height */
-    overflow-x: hidden; /* Prevents horizontal scrollbar */
-    background: #f3f3f3; /* Background color of the sidebar */
-    padding: 1em;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow to the sidebar */
-    z-index: 2; /* Ensure the sidebar sits above other content */
+    right: -300px; /* Start hidden off-screen */
+    width: 300px;
+    height: 100%;
+    background: #ffffff; /* White background */
+    border-left: 1px solid #ddd; /* Light gray border */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow on the left edge */
+    transition: right 0.3s;
+    z-index: 1000; /* Ensure the sidebar is above other content */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Content within the sidebar */
+#sidebar-header {
+    padding: 1rem; /* Bootstrap-style padding */
+    background-color: #f7f7f7; /* Light gray background for the header */
+    border-bottom: 1px solid #ddd; /* Separator */
+}
+
+/* Main content area of sidebar */
+#sidebar-content {
+    flex-grow: 1; /* Fill the remaining space */
+    padding: 1rem;
+    overflow-y: auto; /* Make the content scrollable */
+}
+
+/* Close button */
+#close-sidebar {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem; /* Larger click area for better usability */
+    color: #333;
+    background: #e9ecef; /* Bootstrap gray background */
+    text-align: right; /* Align the 'close' text to the right */
+    border-top: 1px solid #ddd; /* Separator */
 }
