@@ -16,11 +16,14 @@ function render(usStatesData) {
       .append('path')
       .attr('d', path)
       .attr('class', 'state') // The 'state' class is assigned to each state path
-      .on('click', function(event, d) {
-          // This function is called every time a state is clicked
-          showSidebar(); // Open the sidebar
-          // Update the content for the sidebar if required
-      });
+      // .on('click', function(event, d) {
+      //     // This function is called every time a state is clicked
+      //     showSidebar(); // Open the sidebar
+      //     var stateName = d.properties.name;
+      //     // This line grabs the state name and updates the sidebar content
+      //     document.getElementById('sidebar-title').textContent = stateName;
+      // })
+      ;
 }
 
 // Initial render function when GeoJSON data is loaded

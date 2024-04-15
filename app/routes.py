@@ -3,7 +3,13 @@ Route definitions and endpoints for the Flask application.
 """
 
 # flask dependencies
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, jsonify
+
+states_info = {
+    'AL': 'Alabama information...',
+    'AK': 'Alaska information...',
+    # Include information for all states
+}
 
 # =============================================================
 # Set up routes
@@ -19,3 +25,9 @@ def home():
 @routes_bp.route('/map')
 def map():
     return render_template('map.html', loading=True)
+
+@routes_bp.route('/info/<state_code>')
+def state_info(state_id):
+    # Retrieve state information for the AJAX call
+    state_info = states_info.get(state_id.upper(), "No information available.")
+    return jsonify(name=state_id.upper(), info=state_info)

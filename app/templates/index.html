@@ -17,5 +17,46 @@
         </div>
 
 {% include 'sidebar.html' %}
+
+<!-- <script src="{{ url_for('static', filename = 'js/rendermap.js') }}"></script> -->
+<script>
+    $(document).ready(function() {
+        // Define the render function here
+        function renderMap(usStatesData) {
+            const svg = d3.select('#map');
+            const width = $('#container').width();
+            const height = $('#container').height();
+
+            const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(1000);
+            const path = d3.geoPath().projection(projection);
+
+            // Bind data and create one path per GeoJSON feature
+            svg.selectAll('path')
+                .data(usStatesData.features)
+                .enter()
+                .append('path')
+                .attr('d', path)
+                .attr('class', 'state')
+                .on('click', function(event, d) {
+                    // Open the sidebar when a state path is clicked
+                    // TODO: fix this line
+                    //$('#sidebar-title').text(d.properties.name);  // Update the title to the state's name
+                    toggleSidebar();  // Toggle the sidebar visibility
+                });
+        }
+
+        // Fetch the GeoJSON data and then call the render function
+        $.getJSON("static/json/us_states.geojson", function(usStatesData) {
+            renderMap(usStatesData);
+        });
+
+        // The function to toggle the sidebar's visibility
+        window.toggleSidebar = function() {
+            var sidebar = $('#sidebar');
+            var rightPos = sidebar.css('right') === '0px' ? '-300px' : '0px';
+            sidebar.css('right', rightPos);
+        }
+    });
+</script>
     
 {% endblock %}
