@@ -1,13 +1,11 @@
 /* Global Styles & Colors */
 :root {
-    --green: #6aaa64;
-    --darkendGreen: #538d4e;
-    --yellow: #c9b458;
-    --darkendYellow: #b59f3b;
-    --lightGray: #d8d8d8;
-    --gray: #86888a;
-    --darkGray: #434548;
-    --white: #fff;
+    --orange: #FB6523;
+    --yellow: #D99733;
+    --blue: #43748E;
+    --darkGray: #373A37;
+    --lightGray: #D7DAD7;
+    --white: #FBFDFB;
     --black: #212121;
     font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
@@ -16,20 +14,22 @@
 }
 
 body {
-color: var(--orange);
-background-color: var(--darkGray);
+color: var(--yellow);
+background-color: var(--blue);
 }
 
 p {
-color: black;
+color: var(--darkGray);
 }
 
-h3, h1 {
-color: lightgreen;
+h3 {
+color: var(--yellow);
 }
 
 h1 {
-text-align: center;
+    color: white;
+    text-shadow: black 0px 0px 4px; /* color offset-x offset-y blur-radius */
+    text-align: center;
 }
 
 /* footer */
@@ -41,13 +41,23 @@ color: white;
 
 .page-footer {
 padding-top: 30px;
+padding-bottom: 0px;
 }
 
 /* map */
 
-#container {
-    width: calc(100% - 300px); /* Leave space for the sidebar when it's open */
-    height: 500px; /* Set the height for the map container */
+/* Styles for the main container that holds both the sidebar and the map */
+#main-container {
+    justify-content: center; /* Horizontally centers the child elements (including #container) */
+    align-items: start;      /* Aligns children to the start of the cross axis - top in this case */
+    height: 100vh;           /* Set to the full height of the viewport */
+  }
+
+#map-container {
+    display: flex;
+    justify-content: center; /* Center the SVG horizontally */
+    width: 100%; /* Take the full width */
+    height: 500px; /* Set a fixed height for the map */
 }
 
 .map {
@@ -59,13 +69,17 @@ padding-top: 30px;
 }
         
 .state {
-    fill: var(--lightGray);
-    stroke: white;
+    fill: var(--white);
+    stroke: var(--black);
     cursor: pointer;
 }
 
 .state:hover {
-    fill: orange;
+    fill: var(--yellow);
+}
+
+.state-selected {
+    fill: var(--yellow);
 }
 
 /* Sidebar */
@@ -76,20 +90,13 @@ padding-top: 30px;
     right: -300px; /* Start hidden off-screen */
     width: 300px;
     height: 100%;
-    background: #ffffff; /* White background */
+    background: var(--white); /* White background */
     border-left: 1px solid #ddd; /* Light gray border */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow on the left edge */
     transition: right 0.3s;
     z-index: 1000; /* Ensure the sidebar is above other content */
     display: flex;
     flex-direction: column; /* Stack children vertically */
-}
-
-/* Content within the sidebar */
-#sidebar-header {
-    padding: 1rem; /* Bootstrap-style padding */
-    background-color: #f7f7f7; /* Light gray background for the header */
-    border-bottom: 1px solid #ddd; /* Separator */
 }
 
 /* Main content area of sidebar */
@@ -103,8 +110,17 @@ padding-top: 30px;
 #close-sidebar {
     padding: 0.5rem 1rem;
     font-size: 1.5rem; /* Larger click area for better usability */
-    color: #333;
-    background: #e9ecef; /* Bootstrap gray background */
+    color: var(--darkGray);
+    background: var(--lightGray); 
     text-align: right; /* Align the 'close' text to the right */
     border-top: 1px solid #ddd; /* Separator */
+}
+
+/* Content within the sidebar */
+#sidebar-header {
+    padding: 1rem; /* Bootstrap-style padding */
+    font-size: 1.5rem; 
+    background-color: var(--yellow); 
+    color: var(--darkGray);
+    border-bottom: 1px solid var(--darkGray); /* Separator */
 }

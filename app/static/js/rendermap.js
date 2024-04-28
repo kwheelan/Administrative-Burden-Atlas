@@ -1,49 +1,61 @@
-function render(usStatesData) {
-  const width = document.getElementById('container').clientWidth;
-  const height = document.getElementById('container').clientHeight;
+$(document).ready(function() {
+  // Variable to keep track of currently selected state
+  var currentlySelectedState = null;
 
-  // Projection and path generator
-  const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(1000);
-  const path = d3.geoPath().projection(projection);
+  // Define the render function here
+  function renderMap(usStatesData) {
+      const svg = d3.select('#map');
+      const container = $('#map-container'); // Use the correct container ID
+      const width = container.width();
+      const height = container.height();
 
-  // Create SVG element
-  const svg = d3.select('#map').attr('width', width).attr('height', height);
+      const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(1000);
+      const path = d3.geoPath().projection(projection);
 
-  // Bind data and create one path per GeoJSON feature
-  svg.selectAll('path')
-      .data(usStatesData.features)
-      .enter()
-      .append('path')
-      .attr('d', path)
-      .attr('class', 'state') // The 'state' class is assigned to each state path
-      // .on('click', function(event, d) {
-      //     // This function is called every time a state is clicked
-      //     showSidebar(); // Open the sidebar
-      //     var stateName = d.properties.name;
-      //     // This line grabs the state name and updates the sidebar content
-      //     document.getElementById('sidebar-title').textContent = stateName;
-      // })
-      ;
-}
+      svg.attr('width', width).attr('height', height) // Set dimensions on the SVG element
 
-// Initial render function when GeoJSON data is loaded
-d3.json("static/json/us_states.geojson").then(render).catch(function(error) {
-  console.log(error);
-  alert("Failed to load map data");
-});
+      // Bind data and create one path per GeoJSON feature
+      svg.selectAll('path')
+          .data(usStatesData.features)
+          .enter()
+          .append('path')
+          .attr('d', path)
+          .attr('class', 'state')
+          .on('click', function(d) {
+              // Remove selected class from previous state if it exists
+              if (currentlySelectedState) {
+                  d3.select(currentlySelectedState).classed('state-selected', false);
+              }
+              // Save the current state element
+              currentlySelectedState = this;
+              // Add the selected class to the current state
+              d3.select(this).classed('state-selected', true);
+              
+              // Open the sidebar when a state path is clicked
+              $('#sidebar-title').text(d.properties.name);  // Update the title to the state's name
+              showSidebar();  // Toggle the sidebar visibility
+          });
 
-// Sidebar toggle function
-function toggleSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  if (sidebar.style.right === '0px') {
-      sidebar.style.right = '-300px'; // Hide the sidebar
-  } else {
-      sidebar.style.right = '0px'; // Show the sidebar
   }
-}
 
-// Sidebar show function
-function showSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  sidebar.style.right = '0px'; // Show the sidebar
-}
+  // Fetch the GeoJSON data and then call the render function
+  $.getJSON("static/json/us_states.geojson", function(usStatesData) {
+      renderMap(usStatesData);
+  });
+
+  // The function to toggle the sidebar's visibility
+  window.closeSidebar = function() {
+    var sidebar = $('#sidebar');
+    var rightPos = sidebar.css('right') === '0px' ? '-300px' : '0px';
+    sidebar.css('right', rightPos);
+    $('#map-container').css('width', '100%'); 
+  }
+
+  // The function to toggle the sidebar's visibility
+  function showSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.style.right = '0px';          // Show the sidebar
+      $('#map-container').css('width', 'calc(100% - 300px)'); 
+    }
+
+});

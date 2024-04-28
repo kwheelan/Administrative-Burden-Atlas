@@ -22,9 +22,9 @@ routes_bp = Blueprint('routes_bp', __name__)
 def home():
     return render_template('index.html', loading=True)
 
-@routes_bp.route('/map')
+@routes_bp.route('/atlas')
 def map():
-    return render_template('map.html', loading=True)
+    return render_template('atlas.html', loading=True)
 
 @routes_bp.route('/info/<state_code>')
 def state_info(state_id):
