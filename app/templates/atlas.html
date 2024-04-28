@@ -3,21 +3,37 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-
-<div class="container">
-    <h1 style="margin-top: 30px; text-align: center;">
+<div class="container-fluid">
+    <h1 class="text-center my-3">
         Atlas of Administrative Burden
     </h1>
 </div>
-    <br>
-    <div id="main-container"> <!-- Make sure to use this ID if it's referenced in JS -->
-        <div id="map-container">
-          <!-- Map container -->
-          <svg id="map" class="map"></svg>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Directly inserted sidebar content -->
+        <div class="col-3" id="sidebar">
+            <div id="sidebar-header">
+                <h2 id="sidebar-title" class="h5">State Info</h2>
+            </div>
+            <div id="sidebar-content">
+                <p>Click on a state to see its administrative burden report card.</p>
+            </div>
+            <button id="close-sidebar" class="btn btn-light border-top" onclick="closeSidebar()">Close Sidebar</button>
         </div>
-        {% include 'sidebar.html' %}
-      </div>
+
+        <!-- Map container -->
+        <div class="col-9" id="map-container">
+            <svg id="map" class="map w-100 h-100"></svg>
+        </div>
+    </div>
+</div>
+
+<!-- If you need buttons to open/close the sidebar, uncomment below
+<button type="button" onclick="showSidebar()">Open Sidebar</button>
+<button type="button" onclick="closeSidebar()">Close Sidebar</button>
+-->
+
 <script src="{{ url_for('static', filename = 'js/rendermap.js') }}"></script>
 
-    
 {% endblock %}

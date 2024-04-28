@@ -1,75 +1,63 @@
 $(document).ready(function() {
-  // Variable to keep track of currently selected state
   var currentlySelectedState = null;
-
-  // Function to update the map dimensions and redraw paths
+  
+  // Function to update the dimensions of the SVG map and redraw states
   function updateMapSize() {
-    const container = $('#map-container');
-    const width = container.width();
-    const height = container.height();
+    const width = $('#map-container').width();
+    const height = $(window).height(); // Using the window height, but you can adjust as needed
     const svg = d3.select('#map');
-    const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(1000);
+    const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale([width]);
     const path = d3.geoPath().projection(projection);
-
+    
+    // Update SVG dimensions and path data
     svg.attr('width', width).attr('height', height);
-
-    svg.selectAll('path.state')
-       .attr('d', path); // Update the paths with the new projection
+    svg.selectAll('.state').attr('d', path);
   }
 
-  // Function called to resize the map
-  function resizeMap() {
-    // Update the dimensions of the map since the sidebar can affect the container size
+  // Map render function
+  function renderMap(usStatesData) {
+    const svg = d3.select('#map');
+    const path = d3.geoPath(); // Projection will be set in updateMapSize()
+
+    // Bind data and create one path per GeoJSON feature
+    svg.selectAll('path')
+      .data(usStatesData.features)
+      .enter()
+      .append('path')
+      .attr('class', 'state')
+      .on('click', function(d) {
+        if (currentlySelectedState) {
+          d3.select(currentlySelectedState).classed('state-selected', false);
+        }
+        currentlySelectedState = this;
+        d3.select(this).classed('state-selected', true);
+        
+        $('#sidebar-title').text(d.properties.name);
+        showSidebar(); // Call showSidebar to adjust map when opening
+      });
+
+    // Update map on initial render
     updateMapSize();
   }
 
-  // Define the render function here
-  function renderMap(usStatesData) {
-      const container = $('#map-container');
-      const width = container.width();
-      const height = container.height();
-      updateMapSize(width, height); // Function to update map dimensions
+  // Fetch GeoJSON and render the map
+  $.getJSON("static/json/us_states.geojson", renderMap);
 
-      // Bind data and create one path per GeoJSON feature
-      const svg = d3.select('#map');
-      svg.selectAll('path')
-        .data(usStatesData.features)
-        .enter()
-        .append('path')
-        .attr('class', 'state')
-        .attr('d', d3.geoPath().projection(d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(1000)))
-        .on('click', function(d) {
-            if (currentlySelectedState) {
-                d3.select(currentlySelectedState).classed('state-selected', false);
-            }
-            currentlySelectedState = this;
-            d3.select(this).classed('state-selected', true);
-            
-            $('#sidebar-title').text(d.properties.name);
-            showSidebar();
-        });
+  // Event listeners for window resize and sidebar toggles
+  $(window).resize(updateMapSize);
+
+  // Close the sidebar to allow for map to use full container width
+  function closeSidebar() {
+    $('#sidebar').removeClass('show');
+    updateMapSize(); // Update map size after closing
+  }
+
+  // Open the sidebar, which triggers an update to the map size
+  function showSidebar() {
+    $('#sidebar').addClass('show');
+    updateMapSize(); // Update map size after showing
   }
   
-  // Fetch the GeoJSON data and then call the render function
-  $.getJSON("static/json/us_states.geojson", function(usStatesData) {
-      renderMap(usStatesData);
-  });
-
-  // Add window resize event listener
-  $(window).resize(resizeMap);
-
-  // The function to show the sidebar and resize the map
-  function showSidebar() {
-    var sidebar = $('#sidebar');
-    sidebar.css('right', '0px'); // Show the sidebar
-    resizeMap(); // Resize the map as sidebar has changed the container width
-  }
-
-  // The function to close the sidebar and resize the map
-  window.closeSidebar = function() {
-    var sidebar = $('#sidebar');
-    sidebar.css('right', sidebar.css('right') === '0px' ? '-300px' : '0px');
-    resizeMap(); // Resize the map as sidebar has changed the container width
-  }
-
+  // Close the sidebar initially
+  closeSidebar();
 });

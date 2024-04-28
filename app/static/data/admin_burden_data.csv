@@ -1,0 +1,51 @@
+State,M: Take up rate,M: Time to complete,M: Online application,M: Mobile accessible,M: Integration with other programs,T: Take up rate,T: Time to complete,T: Online application,T: Mobile accessible,T: Integration with other programs
+AL,,30,Yes,No,No,,,,,
+AK,,35,Yes,No,No,,,,,
+AZ,,45*,Yes,No,"SNAP, TANF",,45*,Yes,No,"Medicaid, SNAP"
+AR,,30,Yes,No,No,,35*,Yes,No,SNAP
+CA,,,,,,,,,,
+CO,,35*,Yes,Yes,"SNAP, TANF, LIHEAP",,35*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+CT,,No info,Yes,No,No,,65*,Yes,No,SNAP
+DE,,90*,Yes,No,"SNAP, TANF, LIHEAP",,90*,Yes,No,"Medicaid, SNAP, LIHEAP"
+FL,,120*,Yes,No,"SNAP, TANF, LIHEAP",,120*,Yes,No,"Medicaid, SNAP, LIHEAP"
+GA,,60*,Yes,Yes,"SNAP, TANF",,60*,Yes,Yes,"Medicaid, SNAP"
+HI,,No info,Yes,No,No,,,,,
+ID,,35,Yes,No,No,,,,,
+IL,,40*,Yes ,No,"SNAP, TANF",,40*,Yes ,No,"Medicaid, SNAP"
+IN,,60*,Yes,No,"SNAP, TANF",,60*,Yes,No,"Medicaid, SNAP"
+IA,,30,Yes,No,No,,20*,Yes,No,TANF
+KS,,60,Yes,No,No,,60*,Yes,No,"SNAP, LIHEAP"
+KY,,50*,Yes,No,"SNAP, TANF",,50*,Yes,No,"Medicaid, SNAP"
+LA,,35,Yes,Yes,No,,35*,Yes,No,SNAP 
+ME,,45*,Yes,Yes,"SNAP, TANF",,45*,Yes,Yes,"Medicaid, SNAP"
+MD,,35*,Yes,Yes,"SNAP, TANF, LIHEAP",,35*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+MA,,35,Yes,Yes,No,,,,,
+MI,,20*,Yes,Yes,"SNAP, TANF, LIHEAP",,20*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+MN,,50,Yes,No,No,,60*,Yes,No ,SNAP
+MS,,30*,Yes,Yes,"SNAP, TANF, LIHEAP",,30*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+MO,,20,Yes,Yes,No,,40*,Yes,Yes,SNAP
+MT,,30*,Yes,Yes,"SNAP, TANF",,30*,Yes,Yes,"Medicaid, SNAP"
+NE,,40*,Yes,No,"SNAP, TANF, LIHEAP",,40*,Yes,No,"Medicaid, SNAP, LIHEAP"
+NV,,25*,Yes,Yes,"SNAP, TANF",,25*,Yes,Yes,"Medicaid, SNAP"
+NH,,30*,Yes,Yes,"SNAP, TANF",,30*,Yes,Yes,"Medicaid, SNAP"
+NJ,,15,Yes,No,No,,45*,Yes,No,SNAP
+NM,,45*,Yes,Yes,"SNAP, TANF, LIHEAP",,45*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+NY,,30*,Yes,Yes,"SNAP, LIHEAP",,,,,
+NC,,15*,Yes,No ,SNAP,,,,,
+ND,,45*,Yes,No,"SNAP, TANF",,45*,Yes,No,"Medicaid, SNAP"
+OH,,30*,Yes,No,"SNAP, TANF, LIHEAP",,30*,Yes,No,"Medicaid, SNAP, LIHEAP"
+OK,,30*,Yes,Yes,"SNAP, TANF, LIHEAP",,30*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+OR,,50,Yes,Yes,No,,30*,Yes,Yes,SNAP
+PA,,20*,Yes,No,"SNAP, TANF, LIHEAP",,20*,Yes,No,"Medicaid, SNAP, LIHEAP"
+RI,,60*,Yes,Yes,"SNAP, TANF, LIHEAP",,60*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
+SC,,30,Yes,No,No,,30*,Yes,No,SNAP
+SD,,15*,Yes,No,SNAP,,,,,
+TN,,30,Yes,No,No,,20*,Yes,Yes,SNAP
+TX,,60*,Yes,Yes,"SNAP, TANF",,60*,Yes,Yes,"Medicaid, SNAP"
+UT,,60*,Yes,Yes,"SNAP, TANF",,60*,Yes,Yes,"Medicaid, SNAP"
+VT,,25,Yes,No,No,,40*,Yes,No,"SNAP, LIHEAP"
+VA,,60*,Yes,No,"SNAP, TANF, LIHEAP",,60*,Yes,No,"Medicaid, SNAP, LIHEAP"
+WA,,20,Yes,Yes,No,,45*,Yes,No,SNAP
+WV,,50*,Yes,No,"SNAP, LIHEAP",,,,,
+WI,,60*,Yes,No,SNAP,,,,,
+WY,,40,Yes,Yes,No,,,,,
