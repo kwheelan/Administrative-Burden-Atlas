@@ -1,9 +1,3 @@
-{% set page = 'atlas' %}
-
-{% extends 'layout.html' %}
-
-{% block body %}
-
 <div class="container">
     <h1 style="margin-top: 30px; text-align: center;">
         Atlas of Administrative Burden
@@ -16,8 +10,6 @@
           <svg id="map" class="map"></svg>
         </div>
         {% include 'sidebar.html' %}
+        {% include 'modal.html' %}
       </div>
 <script src="{{ url_for('static', filename = 'js/rendermap.js') }}"></script>
-
-    
-{% endblock %}

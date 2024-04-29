@@ -3,6 +3,7 @@
     --orange: #FB6523;
     --yellow: #D99733;
     --blue: #43748E;
+    --lightBlue: #b7c9e2;
     --darkGray: #373A37;
     --lightGray: #D7DAD7;
     --white: #FBFDFB;
@@ -55,8 +56,7 @@ padding-bottom: 0px;
   }
 
 #map-container {
-    display: flex;
-    /*justify-content: center;  Center the SVG horizontally */
+    /* display: flex; */
     width: 100%; /* Take the full width */
     height: 500px; /* Set a fixed height for the map */
 }
@@ -66,7 +66,7 @@ padding-bottom: 0px;
     padding: 0;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 500px;
 }
         
 .state {
@@ -107,16 +107,6 @@ padding-bottom: 0px;
     overflow-y: auto; /* Make the content scrollable */
 }
 
-/* Close button */
-#close-sidebar {
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem; /* Larger click area for better usability */
-    color: var(--darkGray);
-    background: var(--lightGray); 
-    text-align: right; /* Align the 'close' text to the right */
-    border-top: 1px solid #ddd; /* Separator */
-}
-
 /* Content within the sidebar */
 #sidebar-header {
     padding: 1rem; /* Bootstrap-style padding */
@@ -133,6 +123,10 @@ padding-bottom: 0px;
 .section-title {
     font-size: 1.3rem;
     color: var(--darkGray);
+    display: flex;          /* Establish flexbox layout */
+    align-items: center;    /* Vertically center the items */
+    justify-content: space-between; /* Space between left-aligned title and right-aligned button */
+    padding-right: 1rem;    /* Optional padding if needed on the right */
 }
 
 .section-title-bg {
@@ -142,3 +136,60 @@ padding-bottom: 0px;
 .full-fact {
     color: var(--darkGray);
 }
+
+/* Modals (popups) */
+
+/* button to open modal (? buttons) */
+.help-button:hover, #data-modal-btn:hover {
+    background-color: var(--yellow);
+}
+
+.help-button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: var(--lightBlue);
+}
+
+/* data footnote buttom */
+#data-modal-btn {
+    background-color: var(--lightBlue);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

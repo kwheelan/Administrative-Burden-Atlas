@@ -14,8 +14,8 @@ def csv2json(csv_file_path, json_file_path):
             state = row['State']
             m_data = {k.split(": ")[1]: v for k, v in row.items() if k.startswith("M:")}
             t_data = {k.split(": ")[1]: v for k, v in row.items() if k.startswith("T:")}
-            
-            data[state] = {"M": m_data, "T": t_data}
+            s_data = {k.split(": ")[1]: v for k, v in row.items() if k.startswith("S:")}
+            data[state] = {"M": m_data, "T": t_data, "S" : s_data}
 
     # Write the nested dictionary to a JSON file
     with open(json_file_path, mode='w', encoding='utf-8') as json_file:

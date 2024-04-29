@@ -66,8 +66,6 @@ $(document).ready(function() {
             const stateId = d.properties.abbr
             const stateInfo = additionalStateData[stateId];
 
-            console.log(additionalStateData[stateId])
-
             // update sidebar text
 
             // Medicaid
@@ -84,6 +82,16 @@ $(document).ready(function() {
             $('#t-mobile').text(stateInfo.T["Mobile accessible"]);
             $('#t-integrated').text(stateInfo.T["Integration with other programs"]);
 
+            // SNAP 
+            // $('#s-takeup-rate').text(stateInfo.S["Take up rate"]);
+            console.log(additionalStateData[stateId].S)            
+            $('#s-time').text(stateInfo.S["Time to complete"]);
+            $('#s-online').text(stateInfo.S["Online application"]);
+            $('#s-mobile').text(stateInfo.S["Mobile accessible"]);
+            $('#s-integrated').text(stateInfo.S["Integration with other programs"]);
+
+            //Data footnotes
+            $('#stateID').text(stateId);
             showSidebar();
         });
   }
@@ -103,11 +111,41 @@ $(document).ready(function() {
     resizeMap(); // Resize the map as sidebar has changed the container width
   }
 
-  // The function to close the sidebar and resize the map
-  window.closeSidebar = function() {
-    var sidebar = $('#sidebar');
-    sidebar.css('right', sidebar.css('right') === '0px' ? '-300px' : '0px');
-    resizeMap(); // Resize the map as sidebar has changed the container width
+  // JS for the pop-up explainer boxes
+
+  // Function to initialize a modal with its corresponding button and close event.
+  function setupModal(buttonId, modalId) {
+    // Get the modal
+    var modal = document.getElementById(modalId);
+
+    // Get the button that opens the modal
+    var btn = document.getElementById(buttonId);
+
+    // Get the <span> element that closes the modal
+    var span = modal.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
   }
+
+  // Set up each modal with corresponding button
+  setupModal('Medicaid-modal-btn', 'Medicaid-modal');
+  setupModal('TANF-modal-btn', 'TANF-modal');
+  setupModal('SNAP-modal-btn', 'SNAP-modal');
+  setupModal('data-modal-btn', 'data-modal');
 
 });

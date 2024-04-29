@@ -8,11 +8,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "24%",
             "Time to complete": "",
-            "Online application": "",
-            "Mobile accessible": "",
-            "Integration with other programs": ""
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "No"
+        },
+        "S": {
+            "Time to complete": "25",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "No"
         }
     },
     "AK": {
@@ -24,7 +30,13 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "16%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
@@ -40,11 +52,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "14%",
             "Time to complete": "45*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "45*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "AR": {
@@ -56,11 +74,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "15%",
             "Time to complete": "35*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "35*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
         }
     },
     "CA": {
@@ -72,7 +96,13 @@
             "Integration with other programs": ""
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "61%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
@@ -88,11 +118,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "25%",
             "Time to complete": "35*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "35*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "CT": {
@@ -104,11 +140,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "39%",
             "Time to complete": "65*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "65*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
         }
     },
     "DE": {
@@ -120,11 +162,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "33%",
             "Time to complete": "90*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "90*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "FL": {
@@ -136,11 +184,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "17%",
             "Time to complete": "120*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "120*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "GA": {
@@ -152,11 +206,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "8%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "HI": {
@@ -168,7 +228,13 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "25%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
@@ -184,7 +250,13 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "4%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
@@ -200,11 +272,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "22%",
             "Time to complete": "40*",
             "Online application": "Yes ",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "40*",
+            "Online application": "Yes ",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "IN": {
@@ -216,11 +294,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "17%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "IA": {
@@ -232,7 +316,13 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "48%",
+            "Time to complete": "20*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
+        },
+        "S": {
             "Time to complete": "20*",
             "Online application": "Yes",
             "Mobile accessible": "No",
@@ -248,11 +338,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "30%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF, LIHEAP"
         }
     },
     "KY": {
@@ -264,11 +360,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "31%",
             "Time to complete": "50*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "50*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "LA": {
@@ -280,11 +382,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "10%",
             "Time to complete": "35*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP "
+        },
+        "S": {
+            "Time to complete": "35*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
         }
     },
     "ME": {
@@ -296,11 +404,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "92%",
             "Time to complete": "45*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "45*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "MD": {
@@ -312,11 +426,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "29%",
             "Time to complete": "35*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "35*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "MA": {
@@ -328,11 +448,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "41%",
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
             "Integration with other programs": ""
+        },
+        "S": {
+            "Time to complete": "20",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "No"
         }
     },
     "MI": {
@@ -344,11 +470,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "26%",
             "Time to complete": "20*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "20*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "MN": {
@@ -360,11 +492,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "36%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "No ",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "No ",
+            "Integration with other programs": "TANF"
         }
     },
     "MS": {
@@ -376,11 +514,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "15%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "MO": {
@@ -392,11 +536,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "35%",
             "Time to complete": "40*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "40*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "TANF"
         }
     },
     "MT": {
@@ -408,11 +558,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "16%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "NE": {
@@ -424,11 +580,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "22%",
             "Time to complete": "40*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "40*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "NV": {
@@ -440,11 +602,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "16%",
             "Time to complete": "25*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "25*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "NH": {
@@ -456,11 +624,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "67%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "NJ": {
@@ -472,11 +646,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "32%",
             "Time to complete": "45*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "45*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
         }
     },
     "NM": {
@@ -488,11 +668,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "34%",
             "Time to complete": "45*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "45*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "NY": {
@@ -504,11 +690,17 @@
             "Integration with other programs": "SNAP, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "38%",
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
             "Integration with other programs": ""
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, LIHEAP"
         }
     },
     "NC": {
@@ -520,11 +712,17 @@
             "Integration with other programs": "SNAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "9%",
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
             "Integration with other programs": ""
+        },
+        "S": {
+            "Time to complete": "15*",
+            "Online application": "Yes",
+            "Mobile accessible": "No ",
+            "Integration with other programs": "Medicaid"
         }
     },
     "ND": {
@@ -536,11 +734,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "14%",
             "Time to complete": "45*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "45*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "OH": {
@@ -552,11 +756,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "33%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "OK": {
@@ -568,11 +778,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "11%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "OR": {
@@ -584,11 +800,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "63%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "TANF"
         }
     },
     "PA": {
@@ -600,11 +822,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "36%",
             "Time to complete": "20*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "20*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "RI": {
@@ -616,11 +844,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "33%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "SC": {
@@ -632,11 +866,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "12%",
             "Time to complete": "30*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "30*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
         }
     },
     "SD": {
@@ -648,11 +888,17 @@
             "Integration with other programs": "SNAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "18%",
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
             "Integration with other programs": ""
+        },
+        "S": {
+            "Time to complete": "15*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid"
         }
     },
     "TN": {
@@ -664,11 +910,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "33%",
             "Time to complete": "20*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "20*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "TANF"
         }
     },
     "TX": {
@@ -680,11 +932,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "10%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "UT": {
@@ -696,11 +954,17 @@
             "Integration with other programs": "SNAP, TANF"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "18%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "Yes",
             "Integration with other programs": "Medicaid, SNAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "Yes",
+            "Integration with other programs": "Medicaid, TANF"
         }
     },
     "VT": {
@@ -712,11 +976,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "40%",
             "Time to complete": "40*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "40*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF, LIHEAP"
         }
     },
     "VA": {
@@ -728,11 +998,17 @@
             "Integration with other programs": "SNAP, TANF, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "35%",
             "Time to complete": "60*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "Medicaid, SNAP, LIHEAP"
+        },
+        "S": {
+            "Time to complete": "60*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "Medicaid, TANF, LIHEAP"
         }
     },
     "WA": {
@@ -744,11 +1020,17 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "50%",
             "Time to complete": "45*",
             "Online application": "Yes",
             "Mobile accessible": "No",
             "Integration with other programs": "SNAP"
+        },
+        "S": {
+            "Time to complete": "45*",
+            "Online application": "Yes",
+            "Mobile accessible": "No",
+            "Integration with other programs": "TANF"
         }
     },
     "WV": {
@@ -760,7 +1042,13 @@
             "Integration with other programs": "SNAP, LIHEAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "25%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
@@ -776,7 +1064,13 @@
             "Integration with other programs": "SNAP"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "30%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",
@@ -792,7 +1086,13 @@
             "Integration with other programs": "No"
         },
         "T": {
-            "Take up rate": "",
+            "Take up rate": "3%",
+            "Time to complete": "",
+            "Online application": "",
+            "Mobile accessible": "",
+            "Integration with other programs": ""
+        },
+        "S": {
             "Time to complete": "",
             "Online application": "",
             "Mobile accessible": "",

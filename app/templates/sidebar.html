@@ -8,7 +8,10 @@
 
     <container id="Medicaid">
         <div class="section-title-bg pl-1 mt-2">
-            <h3 class="section-title py-2 m-0">Medicaid</h3>
+            <h3 class="section-title py-2 m-0">
+                Medicaid 
+                <button id="Medicaid-modal-btn" class="help-button">i</button>
+            </h3>
         </div>
 
                 <!-- Fact Row -->
@@ -54,7 +57,10 @@
 
     <container id="TANF">
         <div class="section-title-bg pl-1 mt-2">
-            <h3 class="section-title py-2 m-0">TANF</h3>
+            <h3 class="section-title py-2 m-0">
+                TANF
+                <button id="TANF-modal-btn" class="help-button">i</button>
+            </h3>
         </div>
 
                 <!-- Fact Row -->
@@ -99,9 +105,64 @@
 
     </container>
 
+    <container id="SNAP">
+        <div class="section-title-bg pl-1 mt-2">
+            <h3 class="section-title py-2 m-0">
+                SNAP
+                <button id="SNAP-modal-btn" class="help-button">i</button>
+            </h3>
+        </div>
+
+                <!-- Fact Row -->
+                <!-- <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Take-up rate: 
+                        <span class="metric" id="s-takeup-rate">Unknown</span>
+                    </div>
+                </div> -->
+                
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Time needed to complete application: 
+                        <span class="metric" id="s-time">placeholder</span> minutes
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Online application: 
+                        <span class="metric" id="s-online">placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Mobile accessible: 
+                        <span class="metric" id="s-mobile">placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Integration with other state benefits programs: 
+                        <span class="metric" id="s-integrated">placeholder</span>
+                    </div>
+                </div>
+
+    </container>
+
     <p>
-        * = Time to complete an integrated application
+        * = This time estimate is for an integrated benefits application
     </p>
+
+    <button id="data-modal-btn">
+        View data notes for 
+        <span class = "metric" id="stateID"></span>
+    </button>
+
     </div>
-    <!-- <button id="close-sidebar" class="btn btn-light border-top" onclick="closeSidebar()">Close sidebar</button> -->
 </div>

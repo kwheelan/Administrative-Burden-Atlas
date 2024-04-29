@@ -1,51 +1,51 @@
-State,M: Take up rate,M: Time to complete,M: Online application,M: Mobile accessible,M: Integration with other programs,T: Take up rate,T: Time to complete,T: Online application,T: Mobile accessible,T: Integration with other programs
-AL,,30,Yes,No,No,,,,,
-AK,,35,Yes,No,No,,,,,
-AZ,,45*,Yes,No,"SNAP, TANF",,45*,Yes,No,"Medicaid, SNAP"
-AR,,30,Yes,No,No,,35*,Yes,No,SNAP
-CA,,,,,,,,,,
-CO,,35*,Yes,Yes,"SNAP, TANF, LIHEAP",,35*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-CT,,No info,Yes,No,No,,65*,Yes,No,SNAP
-DE,,90*,Yes,No,"SNAP, TANF, LIHEAP",,90*,Yes,No,"Medicaid, SNAP, LIHEAP"
-FL,,120*,Yes,No,"SNAP, TANF, LIHEAP",,120*,Yes,No,"Medicaid, SNAP, LIHEAP"
-GA,,60*,Yes,Yes,"SNAP, TANF",,60*,Yes,Yes,"Medicaid, SNAP"
-HI,,No info,Yes,No,No,,,,,
-ID,,35,Yes,No,No,,,,,
-IL,,40*,Yes ,No,"SNAP, TANF",,40*,Yes ,No,"Medicaid, SNAP"
-IN,,60*,Yes,No,"SNAP, TANF",,60*,Yes,No,"Medicaid, SNAP"
-IA,,30,Yes,No,No,,20*,Yes,No,TANF
-KS,,60,Yes,No,No,,60*,Yes,No,"SNAP, LIHEAP"
-KY,,50*,Yes,No,"SNAP, TANF",,50*,Yes,No,"Medicaid, SNAP"
-LA,,35,Yes,Yes,No,,35*,Yes,No,SNAP 
-ME,,45*,Yes,Yes,"SNAP, TANF",,45*,Yes,Yes,"Medicaid, SNAP"
-MD,,35*,Yes,Yes,"SNAP, TANF, LIHEAP",,35*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-MA,,35,Yes,Yes,No,,,,,
-MI,,20*,Yes,Yes,"SNAP, TANF, LIHEAP",,20*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-MN,,50,Yes,No,No,,60*,Yes,No ,SNAP
-MS,,30*,Yes,Yes,"SNAP, TANF, LIHEAP",,30*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-MO,,20,Yes,Yes,No,,40*,Yes,Yes,SNAP
-MT,,30*,Yes,Yes,"SNAP, TANF",,30*,Yes,Yes,"Medicaid, SNAP"
-NE,,40*,Yes,No,"SNAP, TANF, LIHEAP",,40*,Yes,No,"Medicaid, SNAP, LIHEAP"
-NV,,25*,Yes,Yes,"SNAP, TANF",,25*,Yes,Yes,"Medicaid, SNAP"
-NH,,30*,Yes,Yes,"SNAP, TANF",,30*,Yes,Yes,"Medicaid, SNAP"
-NJ,,15,Yes,No,No,,45*,Yes,No,SNAP
-NM,,45*,Yes,Yes,"SNAP, TANF, LIHEAP",,45*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-NY,,30*,Yes,Yes,"SNAP, LIHEAP",,,,,
-NC,,15*,Yes,No ,SNAP,,,,,
-ND,,45*,Yes,No,"SNAP, TANF",,45*,Yes,No,"Medicaid, SNAP"
-OH,,30*,Yes,No,"SNAP, TANF, LIHEAP",,30*,Yes,No,"Medicaid, SNAP, LIHEAP"
-OK,,30*,Yes,Yes,"SNAP, TANF, LIHEAP",,30*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-OR,,50,Yes,Yes,No,,30*,Yes,Yes,SNAP
-PA,,20*,Yes,No,"SNAP, TANF, LIHEAP",,20*,Yes,No,"Medicaid, SNAP, LIHEAP"
-RI,,60*,Yes,Yes,"SNAP, TANF, LIHEAP",,60*,Yes,Yes,"Medicaid, SNAP, LIHEAP"
-SC,,30,Yes,No,No,,30*,Yes,No,SNAP
-SD,,15*,Yes,No,SNAP,,,,,
-TN,,30,Yes,No,No,,20*,Yes,Yes,SNAP
-TX,,60*,Yes,Yes,"SNAP, TANF",,60*,Yes,Yes,"Medicaid, SNAP"
-UT,,60*,Yes,Yes,"SNAP, TANF",,60*,Yes,Yes,"Medicaid, SNAP"
-VT,,25,Yes,No,No,,40*,Yes,No,"SNAP, LIHEAP"
-VA,,60*,Yes,No,"SNAP, TANF, LIHEAP",,60*,Yes,No,"Medicaid, SNAP, LIHEAP"
-WA,,20,Yes,Yes,No,,45*,Yes,No,SNAP
-WV,,50*,Yes,No,"SNAP, LIHEAP",,,,,
-WI,,60*,Yes,No,SNAP,,,,,
-WY,,40,Yes,Yes,No,,,,,
+State,M: Take up rate,M: Time to complete,M: Online application,M: Mobile accessible,M: Integration with other programs,T: Take up rate,T: Time to complete,T: Online application,T: Mobile accessible,T: Integration with other programs,S: Time to complete,S: Online application,S: Mobile accessible,S: Integration with other programs
+AL,,30,Yes,No,No,24%,,Yes,Yes,No,25,Yes,Yes,No
+AK,,35,Yes,No,No,16%,,,,,,,,
+AZ,,45*,Yes,No,"SNAP, TANF",14%,45*,Yes,No,"Medicaid, SNAP",45*,Yes,No,"Medicaid, TANF"
+AR,,30,Yes,No,No,15%,35*,Yes,No,SNAP,35*,Yes,No,TANF
+CA,,,,,,61%,,,,,,,,
+CO,,35*,Yes,Yes,"SNAP, TANF, LIHEAP",25%,35*,Yes,Yes,"Medicaid, SNAP, LIHEAP",35*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+CT,,No info,Yes,No,No,39%,65*,Yes,No,SNAP,65*,Yes,No,TANF
+DE,,90*,Yes,No,"SNAP, TANF, LIHEAP",33%,90*,Yes,No,"Medicaid, SNAP, LIHEAP",90*,Yes,No,"Medicaid, TANF, LIHEAP"
+FL,,120*,Yes,No,"SNAP, TANF, LIHEAP",17%,120*,Yes,No,"Medicaid, SNAP, LIHEAP",120*,Yes,No,"Medicaid, TANF, LIHEAP"
+GA,,60*,Yes,Yes,"SNAP, TANF",8%,60*,Yes,Yes,"Medicaid, SNAP",60*,Yes,Yes,"Medicaid, TANF"
+HI,,No info,Yes,No,No,25%,,,,,,,,
+ID,,35,Yes,No,No,4%,,,,,,,,
+IL,,40*,Yes ,No,"SNAP, TANF",22%,40*,Yes ,No,"Medicaid, SNAP",40*,Yes ,No,"Medicaid, TANF"
+IN,,60*,Yes,No,"SNAP, TANF",17%,60*,Yes,No,"Medicaid, SNAP",60*,Yes,No,"Medicaid, TANF"
+IA,,30,Yes,No,No,48%,20*,Yes,No,TANF,20*,Yes,No,TANF
+KS,,60,Yes,No,No,30%,60*,Yes,No,"SNAP, LIHEAP",60*,Yes,No,"TANF, LIHEAP"
+KY,,50*,Yes,No,"SNAP, TANF",31%,50*,Yes,No,"Medicaid, SNAP",50*,Yes,No,"Medicaid, TANF"
+LA,,35,Yes,Yes,No,10%,35*,Yes,No,SNAP ,35*,Yes,No,TANF
+ME,,45*,Yes,Yes,"SNAP, TANF",92%,45*,Yes,Yes,"Medicaid, SNAP",45*,Yes,Yes,"Medicaid, TANF"
+MD,,35*,Yes,Yes,"SNAP, TANF, LIHEAP",29%,35*,Yes,Yes,"Medicaid, SNAP, LIHEAP",35*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+MA,,35,Yes,Yes,No,41%,,,,,20,Yes,Yes,No
+MI,,20*,Yes,Yes,"SNAP, TANF, LIHEAP",26%,20*,Yes,Yes,"Medicaid, SNAP, LIHEAP",20*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+MN,,50,Yes,No,No,36%,60*,Yes,No ,SNAP,60*,Yes,No ,TANF
+MS,,30*,Yes,Yes,"SNAP, TANF, LIHEAP",15%,30*,Yes,Yes,"Medicaid, SNAP, LIHEAP",30*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+MO,,20,Yes,Yes,No,35%,40*,Yes,Yes,SNAP,40*,Yes,Yes,TANF
+MT,,30*,Yes,Yes,"SNAP, TANF",16%,30*,Yes,Yes,"Medicaid, SNAP",30*,Yes,Yes,"Medicaid, TANF"
+NE,,40*,Yes,No,"SNAP, TANF, LIHEAP",22%,40*,Yes,No,"Medicaid, SNAP, LIHEAP",40*,Yes,No,"Medicaid, TANF, LIHEAP"
+NV,,25*,Yes,Yes,"SNAP, TANF",16%,25*,Yes,Yes,"Medicaid, SNAP",25*,Yes,Yes,"Medicaid, TANF"
+NH,,30*,Yes,Yes,"SNAP, TANF",67%,30*,Yes,Yes,"Medicaid, SNAP",30*,Yes,Yes,"Medicaid, TANF"
+NJ,,15,Yes,No,No,32%,45*,Yes,No,SNAP,45*,Yes,No,TANF
+NM,,45*,Yes,Yes,"SNAP, TANF, LIHEAP",34%,45*,Yes,Yes,"Medicaid, SNAP, LIHEAP",45*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+NY,,30*,Yes,Yes,"SNAP, LIHEAP",38%,,,,,30*,Yes,Yes,"Medicaid, LIHEAP"
+NC,,15*,Yes,No ,SNAP,9%,,,,,15*,Yes,No ,Medicaid
+ND,,45*,Yes,No,"SNAP, TANF",14%,45*,Yes,No,"Medicaid, SNAP",45*,Yes,No,"Medicaid, TANF"
+OH,,30*,Yes,No,"SNAP, TANF, LIHEAP",33%,30*,Yes,No,"Medicaid, SNAP, LIHEAP",30*,Yes,No,"Medicaid, TANF, LIHEAP"
+OK,,30*,Yes,Yes,"SNAP, TANF, LIHEAP",11%,30*,Yes,Yes,"Medicaid, SNAP, LIHEAP",30*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+OR,,50,Yes,Yes,No,63%,30*,Yes,Yes,SNAP,30*,Yes,Yes,TANF
+PA,,20*,Yes,No,"SNAP, TANF, LIHEAP",36%,20*,Yes,No,"Medicaid, SNAP, LIHEAP",20*,Yes,No,"Medicaid, TANF, LIHEAP"
+RI,,60*,Yes,Yes,"SNAP, TANF, LIHEAP",33%,60*,Yes,Yes,"Medicaid, SNAP, LIHEAP",60*,Yes,Yes,"Medicaid, TANF, LIHEAP"
+SC,,30,Yes,No,No,12%,30*,Yes,No,SNAP,30*,Yes,No,TANF
+SD,,15*,Yes,No,SNAP,18%,,,,,15*,Yes,No,Medicaid
+TN,,30,Yes,No,No,33%,20*,Yes,Yes,SNAP,20*,Yes,Yes,TANF
+TX,,60*,Yes,Yes,"SNAP, TANF",10%,60*,Yes,Yes,"Medicaid, SNAP",60*,Yes,Yes,"Medicaid, TANF"
+UT,,60*,Yes,Yes,"SNAP, TANF",18%,60*,Yes,Yes,"Medicaid, SNAP",60*,Yes,Yes,"Medicaid, TANF"
+VT,,25,Yes,No,No,40%,40*,Yes,No,"SNAP, LIHEAP",40*,Yes,No,"TANF, LIHEAP"
+VA,,60*,Yes,No,"SNAP, TANF, LIHEAP",35%,60*,Yes,No,"Medicaid, SNAP, LIHEAP",60*,Yes,No,"Medicaid, TANF, LIHEAP"
+WA,,20,Yes,Yes,No,50%,45*,Yes,No,SNAP,45*,Yes,No,TANF
+WV,,50*,Yes,No,"SNAP, LIHEAP",25%,,,,,,,,
+WI,,60*,Yes,No,SNAP,30%,,,,,,,,
+WY,,40,Yes,Yes,No,3%,,,,,,,,
