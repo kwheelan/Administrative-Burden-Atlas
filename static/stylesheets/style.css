@@ -240,6 +240,10 @@ section {
     cursor: pointer;
   }
 
+  #report-card {
+    display: none;
+  }
+
   /* Arrow to scroll between sections */
   .scroll-down-arrow {
     position: absolute;
@@ -265,4 +269,14 @@ section {
     60% {
       transform: translateY(-15px);
     }
+  }
+
+  /* Citations */
+
+  .citation:hover {
+    color: var(--orange)
+  }
+
+  .citation {
+    color: var(--yellow)
   }

@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   // Function to load additional data
   function loadAdditionalStateData() {
-    return fetch('static/json/admin_data.json')
+    return fetch('./static/json/admin_data.json')
         .then(response => response.json())
         .then(data => {
           additionalStateData = data;
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     // Function to load additional data
     function loadSourceData() {
-      return fetch('static/json/sources.json')
+      return fetch('./static/json/sources.json')
           .then(response => response.json())
           .then(data => {
             sourceData = data;
@@ -102,6 +102,10 @@ $(document).ready(function() {
             // update sidebar title
             $('#sidebar-title').text(d.properties.name);
 
+            // Hide welcome text and show report card
+            $('#Welcome').css('display', 'none');
+            $('#report-card').css('display', 'block');
+
             // get data on the state from JSON
             const stateId = d.properties.abbr
             const stateInfo = additionalStateData[stateId];
@@ -143,7 +147,7 @@ $(document).ready(function() {
   }
   
   // Fetch the GeoJSON data and then call the render function
-  $.getJSON("static/json/us_states.geojson", function(usStatesData) {
+  $.getJSON("./static/json/us_states.geojson", function(usStatesData) {
       renderMap(usStatesData);
   });
 
@@ -153,5 +157,7 @@ $(document).ready(function() {
     var sidebar = $('#sidebar');
     sidebar.css('right', '0px'); // Show the sidebar
   }
+
+  $('[data-toggle="tooltip"]').tooltip();
 
 });
