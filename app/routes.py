@@ -17,6 +17,6 @@ def home():
 
     # Load the template and render with vars
     rendered_html = render_template('index.html', loading=True)  # Render the template
-    with open('app/templates/rendered_template.html', 'w', encoding='utf-8') as file:  # Open a file to write
+    with open('index.html', 'w', encoding='utf-8') as file:  # Open a file to write
         file.write(rendered_html)  # Write the rendered HTML to the file
     return rendered_html  # Return the rendered HTML to the client as usua
