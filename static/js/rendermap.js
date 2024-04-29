@@ -76,6 +76,55 @@ $(document).ready(function() {
       setupModal('SNAP-modal-btn', 'SNAP-modal');
       setupModal('data-modal-btn', 'data-modal');
 
+  function toIntegerValue(str) {
+      // Remove any non-digit characters (including asterisks and decimal points)
+      let numericString = str.replace(/[^\d]/g, '');
+      // Parse the filtered string into an integer
+      let number = parseInt(numericString, 10);
+      // Check if the conversion is successful
+      return isNaN(number) ? null : number;
+  }
+
+  function colorcode_time(value, green_thresh, red_thresh, element_id) {
+    value = toIntegerValue(value);
+    if (value < green_thresh){
+      // turn # green
+      $(element_id).css('color', 'green');
+      $(element_id).css('background-color', '#d1ffbd');
+    } else if (value >= red_thresh) {
+      $(element_id).css('color', 'red');
+      $(element_id).css('background-color', '#FFCCCB');
+    } else {
+      $(element_id).css('color', '#FF5733');
+      $(element_id).css('background-color', '#FFE590 ');
+    }
+  }
+
+  function colorcode_takeup(value, green_thresh, red_thresh, element_id) {
+    value = toIntegerValue(value);
+    if (value >= green_thresh){
+      // turn # green
+      $(element_id).css('color', 'green');
+      $(element_id).css('background-color', '#d1ffbd');
+    } else if (value < red_thresh) {
+      $(element_id).css('color', 'red');
+      $(element_id).css('background-color', '#FFCCCB');
+    } else {
+      $(element_id).css('color', '#FF5733');
+      $(element_id).css('background-color', '#FFE590 ');
+    }
+  }
+
+  function colorcode_yn(value, element_id) {
+    if (value == "No"){
+      $(element_id).css('color', 'red');
+      $(element_id).css('background-color', '#FFCCCB');
+    } else {
+      // turn # green
+      $(element_id).css('color', 'green');
+      $(element_id).css('background-color', '#d1ffbd');
+  }
+
   // Define the render function here
   function renderMap(usStatesData) {
       const container = $('#map-container');
@@ -119,6 +168,11 @@ $(document).ready(function() {
             $('#m-online').text(stateInfo.M["Online application"]);
             $('#m-mobile').text(stateInfo.M["Mobile accessible"]);
             $('#m-integrated').text(stateInfo.M["Integration with other programs"]);
+            // color code
+            colorcode_takeup(stateInfo.M["Take up rate"], 33, 67,'#m-time-minutes');
+            colorcode_time(stateInfo.M["Time to complete"], 30, 60,'#m-time-minutes');
+            colorcode_yn(stateInfo.M["Online application"], '#m-online');
+            
 
             // TANF
             $('#t-takeup-rate').text(stateInfo.T["Take up rate"]);
@@ -126,6 +180,9 @@ $(document).ready(function() {
             $('#t-online').text(stateInfo.T["Online application"]);
             $('#t-mobile').text(stateInfo.T["Mobile accessible"]);
             $('#t-integrated').text(stateInfo.T["Integration with other programs"]);
+            // color code
+            colorcode_time(stateInfo.T["Time to complete"], 30, 60,'#t-time-minutes')
+
 
             // SNAP 
             // $('#s-takeup-rate').text(stateInfo.S["Take up rate"]);
@@ -133,6 +190,8 @@ $(document).ready(function() {
             $('#s-online').text(stateInfo.S["Online application"]);
             $('#s-mobile').text(stateInfo.S["Mobile accessible"]);
             $('#s-integrated').text(stateInfo.S["Integration with other programs"]);
+            // color code
+            colorcode_time(stateInfo.S["Time to complete"], 30, 60,'#s-time-minutes')
 
             //Data footnotes
             $('#stateID').text(stateId);
