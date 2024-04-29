@@ -1,4 +1,80 @@
 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+
+    <!-- plugins -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+   
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    
+  </head>
+
+<body>
+    <div class="container">
+      <br>
+      <h1>
+          
+          
+      </h1>
+    </div>
+
+    
+    
+
+<!-- Section 1 -->
+<section id="intro-section">
+    <div>
+        <h1>Atlas of Administrative Burden</h1>
+        <p>This is the intro section. Scroll down to see more.</p>
+    </div>
+    <!-- Bouncing arrow pointing to the second section -->
+    <a href="#second-section" class="scroll-down-arrow" aria-label="Scroll down to the second section">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- Section 2 -->
+<section id="second-section">
+    <div>
+        <h1>About Administrative Burden</h1>
+        <p>Some text...</p>
+    </div>
+    <!-- Bouncing arrow pointing to the map section -->
+    <a href="#map-section" class="scroll-down-arrow" aria-label="Scroll down to the map section">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- Map -->
+<section id="map-section">
+    <!-- Using container-fluid for full width -->
+<div class="container-fluid" id="main-container">
+  
+  <!-- Content container (80%) -->
+  <div id="map-container">
+    <h1 style="margin-top: 30px; text-align: center;">
+      Atlas of Administrative Burden
+    </h1>
+    <svg id="map" class="map"></svg>
+  </div>
+        
 <!-- Sidebar (20%) -->
 <div id="sidebar" class="sidebar d-flex flex-column">
     <div id="sidebar-header">
@@ -166,3 +242,109 @@
 
     </div>
 </div>
+        <!-- Medicaid -->
+<div id="Medicaid-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>About Medicaid</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>More text...</p>
+      </div>
+    </div>
+  
+</div>
+
+<!-- TANF -->
+<div id="TANF-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>About TANF</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>More text...</p>
+      </div>
+    </div>
+  
+</div>
+
+<!-- SNAP -->
+<div id="SNAP-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>About SNAP</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>More text...</p>
+      </div>
+    </div>
+  
+</div>
+
+<!-- Data footnotes -->
+<div id="data-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Data footnotes</h3>
+        <span class="close">&times;</span>
+      </div>
+      <!-- Fact Row -->
+      <div class="row no-gutters border-bottom">
+        <div class="col-12 full-fact p-3"> 
+            Medicaid data source: 
+            <a href = "#" class="source" id="m-source">None</a>
+        </div>
+        </div>
+    
+        <!-- Fact Row -->
+      <div class="row no-gutters border-bottom">
+        <div class="col-12 full-fact p-3"> 
+            TANF data source: 
+            <a href = "#" class="source" id="t-source">None</a>
+        </div>
+        </div>
+              
+        <!-- Fact Row -->
+      <div class="row no-gutters border-bottom">
+        <div class="col-12 full-fact p-3"> 
+            SNAP data source: 
+            <a href = "#" class="source" id="s-source">None</a>
+        </div>
+        </div>
+    </div>
+  
+</div>
+      </div>
+<script src="/static/js/rendermap.js"></script>
+</section>
+
+
+</body>
+
+
+
+
+<footer class = "mt-auto page-footer font-small">
+
+  <div class="footer-copyright text-center py-3">
+       © 2024 Copyright: Katrina Wheelan, Madison Prinzing
+  </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

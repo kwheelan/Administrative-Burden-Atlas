@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // Variable to keep track of currently selected state
   var currentlySelectedState = null;
-
   let additionalStateData = {};
+  let sourceData = {};
 
   // Function to load additional data
   function loadAdditionalStateData() {
@@ -14,35 +14,75 @@ $(document).ready(function() {
         .catch(error => console.error('Error loading additional state data:', error));
       }
 
+    // Function to load additional data
+    function loadSourceData() {
+      return fetch('static/json/sources.json')
+          .then(response => response.json())
+          .then(data => {
+            sourceData = data;
+          })
+          .catch(error => console.error('Error loading source data:', error));
+        }
 
-  // Function to update the map dimensions and redraw paths
-  function updateMapSize() {
-    const container = $('#map-container');
-    const width = container.width();
-    const height = container.height();
-    const svg = d3.select('#map');
-    const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(width*.75);
-    const path = d3.geoPath().projection(projection);
+      // Event handler for both arrows
+        $('.scroll-down-arrow').on('click', function(e){
+          e.preventDefault(); // Prevent the default anchor behavior
+          e.stopPropagation(); // Stop the event from bubbling up the DOM tree
+  
+          // Only execute the scroll if this particular arrow is visible in the viewport
+          if($(this).is(':visible')){
+              const targetSection = $(this).attr('href'); // Get the section id to scroll to
+  
+              // Use jQuery's animate function to scroll to the target section
+              $('html, body').animate({
+                  scrollTop: $(targetSection).offset().top
+              }, 1000); // Scroll speed in milliseconds
+              return false; // Return false to prevent default anchor click behavior
+          }
+      })
 
-    svg.attr('width', width).attr('height', height);
-
-    svg.selectAll('path.state')
-       .attr('d', path); // Update the paths with the new projection
-  }
-
-  // Function called to resize the map
-  function resizeMap() {
-    // Update the dimensions of the map since the sidebar can affect the container size
-    updateMapSize();
-  }
+    // Function to initialize a modal with its corresponding button and close event.
+    function setupModal(buttonId, modalId) {
+      // Get the modal
+      var modal = document.getElementById(modalId);
+  
+      // Get the button that opens the modal
+      var btn = document.getElementById(buttonId);
+  
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByClassName("close")[0];
+  
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+  
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  
+      // JS for the pop-up explainer boxes -- set up each modal
+      setupModal('Medicaid-modal-btn', 'Medicaid-modal');
+      setupModal('TANF-modal-btn', 'TANF-modal');
+      setupModal('SNAP-modal-btn', 'SNAP-modal');
+      setupModal('data-modal-btn', 'data-modal');
 
   // Define the render function here
   function renderMap(usStatesData) {
       const container = $('#map-container');
       const width = container.width();
       const height = container.height();
-      updateMapSize(width, height); // Function to update map dimensions
       loadAdditionalStateData()
+      loadSourceData()
 
       // Bind data and create one path per GeoJSON feature
       const svg = d3.select('#map');
@@ -65,6 +105,7 @@ $(document).ready(function() {
             // get data on the state from JSON
             const stateId = d.properties.abbr
             const stateInfo = additionalStateData[stateId];
+            const stateSource = sourceData[stateId]
 
             // update sidebar text
 
@@ -84,7 +125,6 @@ $(document).ready(function() {
 
             // SNAP 
             // $('#s-takeup-rate').text(stateInfo.S["Take up rate"]);
-            console.log(additionalStateData[stateId].S)            
             $('#s-time').text(stateInfo.S["Time to complete"]);
             $('#s-online').text(stateInfo.S["Online application"]);
             $('#s-mobile').text(stateInfo.S["Mobile accessible"]);
@@ -92,6 +132,12 @@ $(document).ready(function() {
 
             //Data footnotes
             $('#stateID').text(stateId);
+            $('#m-source').text(stateSource.M.source);
+            $('#m-source').attr('href', stateSource.M.source);
+            $('#t-source').text(stateSource.T.source);
+            $('#t-source').attr('href', stateSource.T.source);
+            $('#s-source').text(stateSource.S.source);
+            $('#s-source').attr('href', stateSource.S.source);
             showSidebar();
         });
   }
@@ -101,51 +147,11 @@ $(document).ready(function() {
       renderMap(usStatesData);
   });
 
-  // Add window resize event listener
-  $(window).resize(resizeMap);
 
-  // The function to show the sidebar and resize the map
+  // The function to show the sidebar
   function showSidebar() {
     var sidebar = $('#sidebar');
     sidebar.css('right', '0px'); // Show the sidebar
-    resizeMap(); // Resize the map as sidebar has changed the container width
   }
-
-  // JS for the pop-up explainer boxes
-
-  // Function to initialize a modal with its corresponding button and close event.
-  function setupModal(buttonId, modalId) {
-    // Get the modal
-    var modal = document.getElementById(modalId);
-
-    // Get the button that opens the modal
-    var btn = document.getElementById(buttonId);
-
-    // Get the <span> element that closes the modal
-    var span = modal.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.addEventListener('click', function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
-
-  // Set up each modal with corresponding button
-  setupModal('Medicaid-modal-btn', 'Medicaid-modal');
-  setupModal('TANF-modal-btn', 'TANF-modal');
-  setupModal('SNAP-modal-btn', 'SNAP-modal');
-  setupModal('data-modal-btn', 'data-modal');
 
 });

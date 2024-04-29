@@ -13,11 +13,18 @@
     font-size: 16px;
     --header-height: 50px;
     --keyboard-height: 200px;
+    --footer-height: 50px; 
 }
 
 body {
 color: var(--yellow);
 background-color: var(--blue);
+}
+
+html, body {
+    scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -37,36 +44,69 @@ h1 {
 /* footer */
 
 .footer-copyright {
-background-color: var(--darkGray);
-color: white;
+    background-color: var(--darkGray);
+    color: white;
+    height: var(--footer-height);
 }
 
 .page-footer {
-padding-top: 30px;
-padding-bottom: 0px;
+padding-bottom: 10px;
+}
+
+/* settings for each full viewport panel on page */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+#map-section {
+    height: calc(100vh - var(--footer-height));
+}
+
+/* Intro section */
+#intro-section { 
+    min-height: 100vh; /* Set minimum height to full viewport height */
+    background-color: var(--lightGray);
+}
+
+#second-section { 
+    min-height: 100vh; /* Set minimum height to full viewport height */
+    background-color: var(--yellow);
+    color: var(--white);
 }
 
 /* map */
 
-/* Styles for the main container that holds both the sidebar and the map */
 #main-container {
-    /* justify-content: center; Horizontally centers the child elements (including #container) */
-    align-items: start;      /* Aligns children to the start of the cross axis - top in this case */
-    height: 100vh;           /* Set to the full height of the viewport */
+    display: flex; /* Use flexbox to arrange sidebar and content */
+    padding: 0;
+    margin: 0;
+    width: 100vw;
   }
-
+  
 #map-container {
-    /* display: flex; */
-    width: 100%; /* Take the full width */
-    height: 500px; /* Set a fixed height for the map */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    flex: 0 0 77.2%; /* Flex grow, flex shrink, flex basis – doesn't grow or shrink, starts at 80% of the container width */
+    text-align: center; /* Center content within map container */
+    margin-top: 0; /* Ensure there's no gap on top */
+    padding: 0; /* Remove to prevent any internal gaps */
+}
+  
+.container {
+    padding: 0;
 }
 
 .map {
-    margin: 0;
+    margin-top: -50px;
+    margin-bottom: 0;
     padding: 0;
     overflow: hidden;
     width: 100%;
-    height: 500px;
+    height: 100%;
 }
         
 .state {
@@ -86,11 +126,7 @@ padding-bottom: 0px;
 /* Sidebar */
 
 #sidebar {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Start hidden off-screen */
-    width: 300px;
-    height: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width */
     background: var(--white); /* White background */
     border-left: 1px solid #ddd; /* Light gray border */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow on the left edge */
@@ -98,7 +134,17 @@ padding-bottom: 0px;
     z-index: 1000; /* Ensure the sidebar is above other content */
     display: flex;
     flex-direction: column; /* Stack children vertically */
-}
+    flex: 0 0 25%; /* Sidebar takes up 20% of the container width */
+    position: sticky; 
+    top: 0; /* Stick to the top of the viewport */
+    right: 0;
+    overflow-y: auto; /* Enables scrolling for the sidebar */
+    margin: 0; /* Ensure there's no gap on top */
+    padding: 0; 
+    max-width: 100%;
+    height: calc(100vh - var(--footer-height)); /* Adjusted for the footer */
+  }
+  
 
 /* Main content area of sidebar */
 #sidebar-content {
@@ -192,4 +238,31 @@ padding-bottom: 0px;
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  /* Arrow to scroll between sections */
+  .scroll-down-arrow {
+    position: absolute;
+    bottom: 25px; /* Distance from the bottom */
+    right: 25px; /* Distance from the right */
+    font-size: 2rem; /* Size of the arrow */
+    color: var(--darkGray); /* Color of the arrow */
+    z-index: 10; /* Ensure it's above other content */
+    animation: bounce 2s infinite; /* Apply the bouncing animation */
+  }
+
+  .scroll-down-arrow:hover{
+    color: var(--white);
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
   }

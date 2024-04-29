@@ -1,0 +1,552 @@
+{
+    "AL": {
+        "M": {
+            "source": "https://insurealabama.adph.state.al.us/ "
+        },
+        "T": {
+            "source": "https://one.alabama.gov/ "
+        },
+        "S": {
+            "source": "https://mydhr.alabama.gov/"
+        }
+    },
+    "AK": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": "https://health.alaska.gov/dpa/Pages/SNAP/Online-SNAP-Application.aspx"
+        }
+    },
+    "AZ": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "AR": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "CA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "CO": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "CT": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "DE": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "FL": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "GA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "HI": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "ID": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "IL": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "IN": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "IA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "KS": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "KY": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "LA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "ME": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MD": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MI": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MN": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MS": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MO": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "MT": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NE": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NV": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NH": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NJ": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NM": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NY": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "NC": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "ND": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "OH": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "OK": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "OR": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "PA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "RI": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "SC": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "SD": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "TN": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "TX": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "UT": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "VT": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "VA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "WA": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "WV": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "WI": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    },
+    "WY": {
+        "M": {
+            "source": ""
+        },
+        "T": {
+            "source": ""
+        },
+        "S": {
+            "source": ""
+        }
+    }
+}
