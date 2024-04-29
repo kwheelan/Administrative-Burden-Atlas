@@ -3,7 +3,7 @@ Route definitions and endpoints for the Flask application.
 """
 
 # flask dependencies
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, render_template
 
 # =============================================================
 # Set up routes
