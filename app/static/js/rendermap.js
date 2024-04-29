@@ -2,13 +2,26 @@ $(document).ready(function() {
   // Variable to keep track of currently selected state
   var currentlySelectedState = null;
 
+  let additionalStateData = {};
+
+  // Function to load additional data
+  function loadAdditionalStateData() {
+    return fetch('static/json/admin_data.json')
+        .then(response => response.json())
+        .then(data => {
+          additionalStateData = data;
+        })
+        .catch(error => console.error('Error loading additional state data:', error));
+      }
+
+
   // Function to update the map dimensions and redraw paths
   function updateMapSize() {
     const container = $('#map-container');
     const width = container.width();
     const height = container.height();
     const svg = d3.select('#map');
-    const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(1000);
+    const projection = d3.geoAlbersUsa().translate([width / 2, height / 2]).scale(width*.75);
     const path = d3.geoPath().projection(projection);
 
     svg.attr('width', width).attr('height', height);
@@ -29,6 +42,7 @@ $(document).ready(function() {
       const width = container.width();
       const height = container.height();
       updateMapSize(width, height); // Function to update map dimensions
+      loadAdditionalStateData()
 
       // Bind data and create one path per GeoJSON feature
       const svg = d3.select('#map');
@@ -45,7 +59,31 @@ $(document).ready(function() {
             currentlySelectedState = this;
             d3.select(this).classed('state-selected', true);
             
+            // update sidebar title
             $('#sidebar-title').text(d.properties.name);
+
+            // get data on the state from JSON
+            const stateId = d.properties.abbr
+            const stateInfo = additionalStateData[stateId];
+
+            console.log(additionalStateData[stateId])
+
+            // update sidebar text
+
+            // Medicaid
+            $('#m-takeup-rate').text(stateInfo.M["Take up rate"]);
+            $('#m-time').text(stateInfo.M["Time to complete"]);
+            $('#m-online').text(stateInfo.M["Online application"]);
+            $('#m-mobile').text(stateInfo.M["Mobile accessible"]);
+            $('#m-integrated').text(stateInfo.M["Integration with other programs"]);
+
+            // TANF
+            $('#t-takeup-rate').text(stateInfo.T["Take up rate"]);
+            $('#t-time').text(stateInfo.T["Time to complete"]);
+            $('#t-online').text(stateInfo.T["Online application"]);
+            $('#t-mobile').text(stateInfo.T["Mobile accessible"]);
+            $('#t-integrated').text(stateInfo.T["Integration with other programs"]);
+
             showSidebar();
         });
   }

@@ -2,11 +2,106 @@
 <!-- Sidebar -->
 <div id="sidebar" class="sidebar d-flex flex-column">
     <div id="sidebar-header">
-        <h2 id="sidebar-title" class="h5">State Info</h2>
+        <h2 id="sidebar-title" class="h5">Welcome to the Atlas</h2>
     </div>
     <div id="sidebar-content">
-        <!-- The same content will be shown for each state click -->
-        <p>Click on a state to see its administrative burden report card.</p>
+
+    <container id="Medicaid">
+        <div class="section-title-bg pl-1 mt-2">
+            <h3 class="section-title py-2 m-0">Medicaid</h3>
+        </div>
+
+                <!-- Fact Row -->
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Take-up rate: 
+                        <span class="metric" id="m-takeup-rate">Unknown</span>
+                    </div>
+                </div>
+                
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Time needed to complete application: 
+                        <span class="metric" id="m-time">placeholder</span> minutes
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Online application: 
+                        <span class="metric" id="m-online">placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Mobile accessible: 
+                        <span class="metric" id="m-mobile">placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Integration with other state benefits programs: 
+                        <span class="metric" id="m-integrated">placeholder</span>
+                    </div>
+                </div>
+    </container>
+
+    <container id="TANF">
+        <div class="section-title-bg pl-1 mt-2">
+            <h3 class="section-title py-2 m-0">TANF</h3>
+        </div>
+
+                <!-- Fact Row -->
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Take-up rate: 
+                        <span class="metric" id="t-takeup-rate">Unknown</span>
+                    </div>
+                </div>
+                
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Time needed to complete application: 
+                        <span class="metric" id="t-time">placeholder</span> minutes
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Online application: 
+                        <span class="metric" id="t-online">placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Mobile accessible: 
+                        <span class="metric" id="t-mobile">placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Fact Row --> 
+                <div class="row no-gutters border-bottom">
+                    <div class="col-12 full-fact p-3"> 
+                        Integration with other state benefits programs: 
+                        <span class="metric" id="t-integrated">placeholder</span>
+                    </div>
+                </div>
+
+    </container>
+
+    <p>
+        * = Time to complete an integrated application
+    </p>
     </div>
-    <button id="close-sidebar" class="btn btn-light border-top" onclick="closeSidebar()">Close sidebar</button>
+    <!-- <button id="close-sidebar" class="btn btn-light border-top" onclick="closeSidebar()">Close sidebar</button> -->
 </div>

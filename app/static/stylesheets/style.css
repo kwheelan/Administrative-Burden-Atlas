@@ -7,6 +7,7 @@
     --lightGray: #D7DAD7;
     --white: #FBFDFB;
     --black: #212121;
+    --green: #205E2E;
     font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     --header-height: 50px;
@@ -48,14 +49,14 @@ padding-bottom: 0px;
 
 /* Styles for the main container that holds both the sidebar and the map */
 #main-container {
-    justify-content: center; /* Horizontally centers the child elements (including #container) */
+    /* justify-content: center; Horizontally centers the child elements (including #container) */
     align-items: start;      /* Aligns children to the start of the cross axis - top in this case */
     height: 100vh;           /* Set to the full height of the viewport */
   }
 
 #map-container {
     display: flex;
-    justify-content: center; /* Center the SVG horizontally */
+    /*justify-content: center;  Center the SVG horizontally */
     width: 100%; /* Take the full width */
     height: 500px; /* Set a fixed height for the map */
 }
@@ -123,4 +124,21 @@ padding-bottom: 0px;
     background-color: var(--yellow); 
     color: var(--darkGray);
     border-bottom: 1px solid var(--darkGray); /* Separator */
+}
+
+#sidebar-title {
+    font-size: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--darkGray);
+}
+
+.section-title-bg {
+    background-color: var(--lightGray);
+}
+
+.full-fact {
+    color: var(--darkGray);
 }

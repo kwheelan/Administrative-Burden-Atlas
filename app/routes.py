@@ -24,7 +24,7 @@ def home():
 
 @routes_bp.route('/atlas')
 def map():
-    return render_template('atlas.html', loading=True)
+    return render_template('atlas.html', loading=True) #, state_info = state_info)
 
 @routes_bp.route('/info/<state_code>')
 def state_info(state_id):
