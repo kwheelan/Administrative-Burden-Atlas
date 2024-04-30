@@ -1,2 +1,5 @@
-# administrative_burden_atlas
-744 final project
+# Atlas of Administrative Burden
+
+Final project for PUBPOL 744.
+Katrina Wheelan and Madison Prinzing
+
