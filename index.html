@@ -107,7 +107,7 @@
 
 <section id="third-section">
     <div class = "intro-text">
-        <h1 style="color: var(--lightBlue)">Why do we care about administrative burden?</h1>
+        <h1>Why do we care about administrative burden?</h1>
         <br>
         <p>
             Administrative burden can reduce the enrollment in essential services, 
@@ -117,7 +117,7 @@
         </p>
         <br>
         <p>
-            A <span style="color:var(--yellow)">positive externality</span> 
+            A <strong>positive externality</strong> 
             is when private demand and supply curves do not accurately 
             measure marginal social benefits. More simply put, it is when there are positive 
             side effects of a program that are not included in the program's price tag. 
@@ -136,7 +136,7 @@
         </ul>
         <br>
         <p>
-            A <span style="color:var(--yellow)">negative externality</span>  is when private demand and supply curves do not accurately measure marginal social cost. More simply put, it is when negative side effects are not included in the costs of the program. 
+            A <strong>negative externality</strong>  is when private demand and supply curves do not accurately measure marginal social cost. More simply put, it is when negative side effects are not included in the costs of the program. 
         </p>
         <ul>
             <li>
@@ -150,7 +150,7 @@
         </ul>
     </div>
     <!-- Bouncing arrow pointing to the map section -->
-    <a style="color: white" href="#fourth-section" class="scroll-down-arrow" aria-label="Scroll down to the map section">
+    <a href="#fourth-section" class="scroll-down-arrow" aria-label="Scroll down to the map section">
         <i class="fas fa-chevron-down"></i>
     </a>
 </section>
@@ -160,7 +160,7 @@
         <h1>What are the benefits of social support programs?</h1>
         <br>
         <p>
-            <strong style="color: var(--blue)">Redistribution</strong> involves the transfer 
+            <strong>Redistribution</strong> involves the transfer 
             of resources from one group to another and is often implemented through 
             government intervention such as social support programs, which are designed 
             to shift resources from high-income individuals to those with lower incomes
@@ -169,7 +169,7 @@
         </p>
         <br>
         <p>    
-            The concept of <strong style="color: var(--blue)">consumption smoothing</strong> 
+            The concept of <strong>consumption smoothing</strong> 
             relates to the redistribution of 
             consumption from periods of high consumption, where marginal utility is 
             low, to periods when consumption is less and marginal utility is higher
@@ -187,7 +187,7 @@
         
     </div>
     <!-- Bouncing arrow pointing to the map section -->
-    <a href="#map-section" class="scroll-down-arrow" aria-label="Scroll down to the map section">
+    <a style="color: white" href="#map-section" class="scroll-down-arrow" aria-label="Scroll down to the map section">
         <i class="fas fa-chevron-down"></i>
     </a>
 </section>
@@ -199,6 +199,8 @@
   
   <!-- Content container (80%) -->
   <div id="map-container">
+    <br>
+    <br>
     <h1 style="margin-top: 30px; text-align: center;">
       Atlas of Administrative Burden
     </h1>
@@ -215,6 +217,10 @@
     <div id="Welcome">
         <p>
             Click on a state to view its administrative burden report card.
+            <br>
+            <br>
+            Data are from 2019. See state-specific data references at the bottom 
+            of the sidebar after clicking on a state.
         </p>
     </div>
 
@@ -230,7 +236,7 @@
                 <!-- Fact Row -->
                 <div class="row no-gutters border-bottom" id="M1">
                     <div class="col-12 full-fact p-3"> 
-                        Take-up rate: 
+                        <a href="javascript:void(0);" data-toggle="tooltip" title="The takeup rate is the portion of eligible residents who receive the benefit." class="citation">Take-up rate: </a>
                         <strong class="metric" id="m-takeup-rate">Unknown</strong>
                     </div>
                 </div>
@@ -269,7 +275,7 @@
                     </div>
                 </div>
             </div>
-
+<br>
     <div id="TANF">
         <div class="section-title-bg pl-1 mt-2">
             <h3 class="section-title py-2 m-0">
@@ -281,7 +287,7 @@
                 <!-- Fact Row -->
                 <div class="row no-gutters border-bottom" id="T1">
                     <div class="col-12 full-fact p-3"> 
-                        Take-up rate: 
+                        <a href="javascript:void(0);" data-toggle="tooltip" title="The takeup rate is the portion of eligible residents who receive the benefit." class="citation">Take-up rate: </a> 
                         <strong class="metric" id="t-takeup-rate">Unknown</strong>
                     </div>
                 </div>
@@ -321,7 +327,7 @@
                 </div>
 
             </div>
-
+<br>
     <div id="SNAP">
         <div class="section-title-bg pl-1 mt-2">
             <h3 class="section-title py-2 m-0">
@@ -333,7 +339,7 @@
                 <!-- Fact Row -->
                 <!-- <div class="row no-gutters border-bottom">
                     <div class="col-12 full-fact p-3"> 
-                        Take-up rate: 
+                        <a href="javascript:void(0);" data-toggle="tooltip" title="The takeup rate is the portion of eligible residents who receive the benefit." class="citation">Take-up rate: </a> 
                         <span class="metric" id="s-takeup-rate">Unknown</span>
                     </div>
                 </div> -->
@@ -373,7 +379,7 @@
                 </div>
 
             </div>
-
+<br>
     <div id="sidebar-footer">
         <p>
             * = This time estimate is for an integrated benefits application
@@ -383,7 +389,7 @@
             View data notes for 
             <span class = "metric" id="stateID"></span>
         </button>
-
+<br>
 </div>
     </div>
 </div>

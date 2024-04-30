@@ -19,6 +19,7 @@
 body {
 color: var(--yellow);
 background-color: var(--blue);
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 html, body {
@@ -35,6 +36,7 @@ h1 {
     color: white;
     text-shadow: black 0px 0px 4px; /* color offset-x offset-y blur-radius */
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* footer */
@@ -78,14 +80,30 @@ section {
 
 #third-section { 
     min-height: 100vh; /* Set minimum height to full viewport height */
-    background-color: var(--darkGray);
-    color: var(--white);
+    background-color: var(--lightBlue);
+    color: var(--darkGray);
+}
+
+#third-section strong {
+    color: var(--blue);
 }
 
 #fourth-section { 
     min-height: 100vh; /* Set minimum height to full viewport height */
-    background-color: var(--lightBlue);
-    color: var(--darkGray);
+    background-color: var(--darkGray);
+    color: var(--white);
+}
+
+#fourth-section strong {
+    color: var(--yellow);
+}
+
+#fourth-section .citation, #second-section .citation {
+    color: var(--blue);
+}
+
+#sidebar .citation {
+    color: blue;
 }
 
 /* map */
@@ -110,7 +128,7 @@ section {
 }
 
 .map {
-    margin-top: -50px;
+    margin-top: -100px;
     margin-bottom: 0;
     padding: 0;
     overflow: hidden;
@@ -341,7 +359,7 @@ section {
 
 
 /* early sections */
-.intro-text{
+.intro-text {
     margin: 0 120px;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
