@@ -3,6 +3,9 @@ $(document).ready(function() {
   var currentlySelectedState = null;
   let additionalStateData = {};
   let sourceData = {};
+  let green = '#d7ffc3';
+  let red = '#FFdCdB';
+  let yellow = '#FFFab5';
 
   // Function to load additional data
   function loadAdditionalStateData() {
@@ -88,42 +91,32 @@ $(document).ready(function() {
   function colorcode_time(value, green_thresh, red_thresh, element_id) {
     value = toIntegerValue(value);
     if (value < green_thresh){
-      // turn # green
-      $(element_id).css('color', 'green');
-      $(element_id).css('background-color', '#d1ffbd');
+      $(element_id).css('background-color', green);
     } else if (value >= red_thresh) {
-      $(element_id).css('color', 'red');
-      $(element_id).css('background-color', '#FFCCCB');
+      $(element_id).css('background-color', red);
     } else {
-      $(element_id).css('color', '#FF5733');
-      $(element_id).css('background-color', '#FFE590 ');
+      $(element_id).css('background-color', yellow);
     }
   }
 
   function colorcode_takeup(value, green_thresh, red_thresh, element_id) {
-    value = toIntegerValue(value);
+    console.log(value)
     if (value >= green_thresh){
-      // turn # green
-      $(element_id).css('color', 'green');
-      $(element_id).css('background-color', '#d1ffbd');
+      $(element_id).css('background-color', green);
     } else if (value < red_thresh) {
-      $(element_id).css('color', 'red');
-      $(element_id).css('background-color', '#FFCCCB');
+      $(element_id).css('background-color', red);
     } else {
-      $(element_id).css('color', '#FF5733');
-      $(element_id).css('background-color', '#FFE590 ');
+      $(element_id).css('background-color', yellow);
     }
   }
 
   function colorcode_yn(value, element_id) {
     if (value == "No"){
-      $(element_id).css('color', 'red');
-      $(element_id).css('background-color', '#FFCCCB');
+      $(element_id).css('background-color', red);
     } else {
       // turn # green
-      $(element_id).css('color', 'green');
-      $(element_id).css('background-color', '#d1ffbd');
-  }
+      $(element_id).css('background-color', green);
+      }  }
 
   // Define the render function here
   function renderMap(usStatesData) {
@@ -169,10 +162,11 @@ $(document).ready(function() {
             $('#m-mobile').text(stateInfo.M["Mobile accessible"]);
             $('#m-integrated').text(stateInfo.M["Integration with other programs"]);
             // color code
-            colorcode_takeup(stateInfo.M["Take up rate"], 33, 67,'#m-time-minutes');
-            colorcode_time(stateInfo.M["Time to complete"], 30, 60,'#m-time-minutes');
-            colorcode_yn(stateInfo.M["Online application"], '#m-online');
-            
+            colorcode_takeup(stateInfo.M["Take up rate"], 33, 67,'#M1');
+            colorcode_time(stateInfo.M["Time to complete"], 30, 60,'#M2');
+            colorcode_yn(stateInfo.M["Online application"], '#M3');
+            colorcode_yn(stateInfo.M["Mobile accessible"], '#M4');
+            colorcode_yn(stateInfo.M["Integration with other programs"], '#M5');
 
             // TANF
             $('#t-takeup-rate').text(stateInfo.T["Take up rate"]);
@@ -181,7 +175,11 @@ $(document).ready(function() {
             $('#t-mobile').text(stateInfo.T["Mobile accessible"]);
             $('#t-integrated').text(stateInfo.T["Integration with other programs"]);
             // color code
-            colorcode_time(stateInfo.T["Time to complete"], 30, 60,'#t-time-minutes')
+            colorcode_time(stateInfo.T["Time to complete"], 30, 60,'#T1')
+            colorcode_takeup(stateInfo.T["Take up rate"], 33, 67,'#T2');
+            colorcode_yn(stateInfo.T["Online application"], '#T3');
+            colorcode_yn(stateInfo.T["Mobile accessible"], '#T4');
+            colorcode_yn(stateInfo.T["Integration with other programs"], '#T5');
 
 
             // SNAP 
@@ -191,7 +189,10 @@ $(document).ready(function() {
             $('#s-mobile').text(stateInfo.S["Mobile accessible"]);
             $('#s-integrated').text(stateInfo.S["Integration with other programs"]);
             // color code
-            colorcode_time(stateInfo.S["Time to complete"], 30, 60,'#s-time-minutes')
+            colorcode_time(stateInfo.S["Time to complete"], 30, 60,'#S2')
+            colorcode_yn(stateInfo.S["Online application"], '#S3');
+            colorcode_yn(stateInfo.S["Mobile accessible"], '#S4');
+            colorcode_yn(stateInfo.S["Integration with other programs"], '#S5');
 
             //Data footnotes
             $('#stateID').text(stateId);

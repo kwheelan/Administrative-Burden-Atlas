@@ -157,8 +157,8 @@ section {
 #sidebar-header {
     padding: 1rem; /* Bootstrap-style padding */
     font-size: 1.5rem; 
-    background-color: var(--yellow); 
-    color: var(--darkGray);
+    background-color: var(--darkGray); 
+    color: var(--white);
     border-bottom: 1px solid var(--darkGray); /* Separator */
 }
 
@@ -171,16 +171,23 @@ section {
 }
 
 .section-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--darkGray);
     display: flex;          /* Establish flexbox layout */
     align-items: center;    /* Vertically center the items */
     justify-content: space-between; /* Space between left-aligned title and right-aligned button */
-    padding-right: 1rem;    /* Optional padding if needed on the right */
+    padding: 0.5rem;    /* Optional padding if needed on the right */
+    /* border-bottom:  1px solid var(--darkGray); */
+    margin-bottom: 5px;
+    height: 50px;
 }
 
 .section-title-bg {
     background-color: var(--lightGray);
+}
+
+.row {
+    margin-top: 3px;
 }
 
 .full-fact {
