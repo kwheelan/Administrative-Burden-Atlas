@@ -180,6 +180,10 @@ section {
     background-color: null;
 }
 
+#t-mins, #m-mins, #s-mins {
+    display: 'block';
+}
+
 .section-title {
     font-size: 1.5rem;
     color: var(--darkGray);
@@ -300,8 +304,41 @@ section {
   }
 
   .citation {
-    color: var(--blue)
+    color: blue
   }
+
+  #third-section .citation {
+    color: var(--blue);
+  }
+
+
+  .full-fact {
+    /* This property allows long words to be able to break and wrap onto the next line */
+    overflow-wrap: break-word;
+  
+    /* Use this if you want to break words right at the edge of the container */
+    word-break: break-word;
+  
+    /* This one ensures that if text does overflow, it's hidden */
+    overflow: hidden;
+  
+    /* And this property replaces the cut off text with an ellipsis */
+    text-overflow: ellipsis;
+  
+    /* Make sure the .full-fact class is not wider than its container */
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+  
+    /* For aesthetic purposes, to prevent text from butting right up against the edge */
+    padding-right: 8px;
+  }
+  
+  /* Optional: Add styling for the link to prevent it from stretching outside the modal; you may add display block or inline-block depending on your layout */
+  .source {
+    display: inline-block; /* This will treat the link as a block, helping to contain word wrapping */
+    max-width: 100%; /* This ensures that the link does not become wider than its parent */
+  }
+
 
 /* early sections */
 .intro-text{

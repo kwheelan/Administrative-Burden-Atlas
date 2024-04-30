@@ -6,6 +6,7 @@ $(document).ready(function() {
   let green = '#d7ffc3';
   let red = '#FFdCdB';
   let yellow = '#FFFab5';
+  let unknown = "var(--white)"
 
   // Function to load additional data
   function loadAdditionalStateData() {
@@ -88,25 +89,34 @@ $(document).ready(function() {
       return isNaN(number) ? null : number;
   }
 
-  function colorcode_time(value, green_thresh, red_thresh, element_id) {
-    value = toIntegerValue(value);
-    if (value < green_thresh){
-      $(element_id).css('background-color', green);
-    } else if (value >= red_thresh) {
-      $(element_id).css('background-color', red);
-    } else {
-      $(element_id).css('background-color', yellow);
+  function colorcode_time(value, green_thresh, red_thresh, element_id, mins_id) {
+    if (value == "Unknown"){
+      $(element_id).css('background-color', unknown);
+      $(mins_id).css('display', 'none');
+    } else{
+      value = toIntegerValue(value);
+      if (value < green_thresh){
+        $(element_id).css('background-color', green);
+      } else if (value >= red_thresh) {
+        $(element_id).css('background-color', red);
+      } else {
+        $(element_id).css('background-color', yellow);
+      }
     }
   }
 
   function colorcode_takeup(value, green_thresh, red_thresh, element_id) {
-    console.log(value)
-    if (value >= green_thresh){
-      $(element_id).css('background-color', green);
-    } else if (value < red_thresh) {
-      $(element_id).css('background-color', red);
-    } else {
-      $(element_id).css('background-color', yellow);
+    if (value == "Unknown"){
+      $(element_id).css('background-color', unknown);
+    } else{
+      value = toIntegerValue(value);
+      if (value >= green_thresh){
+        $(element_id).css('background-color', green);
+      } else if (value < red_thresh) {
+        $(element_id).css('background-color', red);
+      } else {
+        $(element_id).css('background-color', yellow);
+      }
     }
   }
 
@@ -163,7 +173,7 @@ $(document).ready(function() {
             $('#m-integrated').text(stateInfo.M["Integration with other programs"]);
             // color code
             colorcode_takeup(stateInfo.M["Take up rate"], 85, 75,'#M1');
-            colorcode_time(stateInfo.M["Time to complete"], 30, 60,'#M2');
+            colorcode_time(stateInfo.M["Time to complete"], 30, 60,'#M2', "#m-mins");
             colorcode_yn(stateInfo.M["Online application"], '#M3');
             colorcode_yn(stateInfo.M["Mobile accessible"], '#M4');
             colorcode_yn(stateInfo.M["Integration with other programs"], '#M5');
@@ -175,8 +185,8 @@ $(document).ready(function() {
             $('#t-mobile').text(stateInfo.T["Mobile accessible"]);
             $('#t-integrated').text(stateInfo.T["Integration with other programs"]);
             // color code
-            colorcode_time(stateInfo.T["Time to complete"], 30, 60,'#T1')
-            colorcode_takeup(stateInfo.T["Take up rate"], 67, 33,'#T2');
+            colorcode_time(stateInfo.T["Time to complete"], 30, 60,'#T2', "#t-mins")
+            colorcode_takeup(stateInfo.T["Take up rate"], 67, 33,'#T1');
             colorcode_yn(stateInfo.T["Online application"], '#T3');
             colorcode_yn(stateInfo.T["Mobile accessible"], '#T4');
             colorcode_yn(stateInfo.T["Integration with other programs"], '#T5');
@@ -189,7 +199,7 @@ $(document).ready(function() {
             $('#s-mobile').text(stateInfo.S["Mobile accessible"]);
             $('#s-integrated').text(stateInfo.S["Integration with other programs"]);
             // color code
-            colorcode_time(stateInfo.S["Time to complete"], 30, 60,'#S2')
+            colorcode_time(stateInfo.S["Time to complete"], 30, 60,'#S2', "#s-mins")
             colorcode_yn(stateInfo.S["Online application"], '#S3');
             colorcode_yn(stateInfo.S["Mobile accessible"], '#S4');
             colorcode_yn(stateInfo.S["Integration with other programs"], '#S5');
