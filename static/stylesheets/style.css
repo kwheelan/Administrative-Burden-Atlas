@@ -27,10 +27,6 @@ html, body {
     padding: 0;
 }
 
-p {
-color: var(--darkGray);
-}
-
 h3 {
 color: var(--yellow);
 }
@@ -71,12 +67,25 @@ section {
 #intro-section { 
     min-height: 100vh; /* Set minimum height to full viewport height */
     background-color: var(--lightGray);
+    color: var(--darkGray)
 }
 
 #second-section { 
     min-height: 100vh; /* Set minimum height to full viewport height */
     background-color: var(--yellow);
+    color: var(--darkGray);
+}
+
+#third-section { 
+    min-height: 100vh; /* Set minimum height to full viewport height */
+    background-color: var(--darkGray);
     color: var(--white);
+}
+
+#fourth-section { 
+    min-height: 100vh; /* Set minimum height to full viewport height */
+    background-color: var(--lightBlue);
+    color: var(--darkGray);
 }
 
 /* map */
@@ -143,6 +152,7 @@ section {
     padding: 0; 
     max-width: 100%;
     height: calc(100vh - var(--footer-height)); /* Adjusted for the footer */
+    color: var(--darkGray)
   }
   
 
@@ -225,6 +235,7 @@ section {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: var(--darkGray)
   }
   
   /* Modal Content/Box */
@@ -289,5 +300,12 @@ section {
   }
 
   .citation {
-    color: var(--yellow)
+    color: var(--blue)
   }
+
+/* early sections */
+.intro-text{
+    margin: 0 120px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

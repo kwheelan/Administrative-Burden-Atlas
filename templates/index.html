@@ -5,28 +5,11 @@
 {% block body %}
 
 <!-- Section 1 -->
-<section id="intro-section">
-    <div>
-        <h1>Atlas of Administrative Burden</h1>
-        <p>This is the intro section. Scroll down to see more.</p>
-    </div>
-    <!-- Bouncing arrow pointing to the second section -->
-    <a href="#second-section" class="scroll-down-arrow" aria-label="Scroll down to the second section">
-        <i class="fas fa-chevron-down"></i>
-    </a>
-</section>
+{% include 'intro.html' %}
+   
 
 <!-- Section 2 -->
-<section id="second-section">
-    <div>
-        <h1>About Administrative Burden</h1>
-        <p>Some text...</p>
-    </div>
-    <!-- Bouncing arrow pointing to the map section -->
-    <a href="#map-section" class="scroll-down-arrow" aria-label="Scroll down to the map section">
-        <i class="fas fa-chevron-down"></i>
-    </a>
-</section>
+{% include 'explainer-section.html' %}
 
 <!-- Map -->
 <section id="map-section">

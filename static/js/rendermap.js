@@ -162,7 +162,7 @@ $(document).ready(function() {
             $('#m-mobile').text(stateInfo.M["Mobile accessible"]);
             $('#m-integrated').text(stateInfo.M["Integration with other programs"]);
             // color code
-            colorcode_takeup(stateInfo.M["Take up rate"], 33, 67,'#M1');
+            colorcode_takeup(stateInfo.M["Take up rate"], 85, 75,'#M1');
             colorcode_time(stateInfo.M["Time to complete"], 30, 60,'#M2');
             colorcode_yn(stateInfo.M["Online application"], '#M3');
             colorcode_yn(stateInfo.M["Mobile accessible"], '#M4');
@@ -176,7 +176,7 @@ $(document).ready(function() {
             $('#t-integrated').text(stateInfo.T["Integration with other programs"]);
             // color code
             colorcode_time(stateInfo.T["Time to complete"], 30, 60,'#T1')
-            colorcode_takeup(stateInfo.T["Take up rate"], 33, 67,'#T2');
+            colorcode_takeup(stateInfo.T["Take up rate"], 67, 33,'#T2');
             colorcode_yn(stateInfo.T["Online application"], '#T3');
             colorcode_yn(stateInfo.T["Mobile accessible"], '#T4');
             colorcode_yn(stateInfo.T["Integration with other programs"], '#T5');
